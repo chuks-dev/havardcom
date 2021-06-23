@@ -1,0 +1,138 @@
+
+
+C:\Program Files\MongoDB\bin>net start mongodb
+The MongoDB Server (MongoDB) service is starting..
+The MongoDB Server (MongoDB) service was started successfully.
+
+
+C:\Program Files\MongoDB\bin>mongo
+MongoDB shell version v4.4.0
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("a70e549a-df39-4028-8dde-525f7da21ba4") }
+MongoDB server version: 4.4.0
+---
+The server generated these startup warnings when booting:
+        2021-05-18T12:22:07.791+01:00: ***** SERVER RESTARTED *****
+        2021-05-18T12:22:09.176+01:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs
+admin      0.000GB
+config     0.000GB
+havardcom  0.000GB
+local      0.000GB
+> use blog
+switched to db blog
+> db.createCollection('posts')
+{ "ok" : 1 }
+> show collections
+posts
+> db.posts.find()
+> db.posts.insertOne({title:"A new blog post",body:"this is suppose to be the body of my new post"})
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("60a3a5c92be9c800906fae84")
+}
+> db.posts.find()
+{ "_id" : ObjectId("60a3a5c92be9c800906fae84"), "title" : "A new blog post", "body" : "this is suppose to be the body of my new post" }
+> db.createCollection('authors')
+{ "ok" : 1 }
+> show collections
+authors
+posts
+> db.authors.insertOne({name:"Chuks", age:24})
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("60a3a8752be9c800906fae85")
+}
+> db.authors.find()
+{ "_id" : ObjectId("60a3a8752be9c800906fae85"), "name" : "Chuks", "age" : 24 }
+> db.posts.insertMany([{title:"Spider man", body:"This is a post about the spider man"}, {titel:"Super man", body:"This is a post about the super man"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("60a3a8f22be9c800906fae86"),
+                ObjectId("60a3a8f22be9c800906fae87")
+        ]
+}
+> db.posts.find()
+{ "_id" : ObjectId("60a3a5c92be9c800906fae84"), "title" : "A new blog post", "body" : "this is suppose to be the body of my new post" }
+{ "_id" : ObjectId("60a3a8f22be9c800906fae86"), "title" : "Spider man", "body" : "This is a post about the spider man" }
+{ "_id" : ObjectId("60a3a8f22be9c800906fae87"), "titel" : "Super man", "body" : "This is a post about the super man" }
+> db.authors.find()
+{ "_id" : ObjectId("60a3a8752be9c800906fae85"), "name" : "Chuks", "age" : 24 }
+> db.authors.insertMany([{name:"Williams", age:25},{name:"Jane", age:19}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("60a3aaad2be9c800906fae88"),
+                ObjectId("60a3aaad2be9c800906fae89")
+        ]
+}
+> db.authors.find()
+{ "_id" : ObjectId("60a3a8752be9c800906fae85"), "name" : "Chuks", "age" : 24 }
+{ "_id" : ObjectId("60a3aaad2be9c800906fae88"), "name" : "Williams", "age" : 25 }
+{ "_id" : ObjectId("60a3aaad2be9c800906fae89"), "name" : "Jane", "age" : 19 }
+> db.posts.find()
+{ "_id" : ObjectId("60a3a5c92be9c800906fae84"), "title" : "A new blog post", "body" : "this is suppose to be the body of my new post" }
+{ "_id" : ObjectId("60a3a8f22be9c800906fae86"), "title" : "Spider man", "body" : "This is a post about the spider man" }
+{ "_id" : ObjectId("60a3a8f22be9c800906fae87"), "titel" : "Super man", "body" : "This is a post about the super man" }
+> db.posts.updateOne({title:"Spider man"}, {$set:{author:"Jane"}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.posts.find()
+{ "_id" : ObjectId("60a3a5c92be9c800906fae84"), "title" : "A new blog post", "body" : "this is suppose to be the body of my new post" }
+{ "_id" : ObjectId("60a3a8f22be9c800906fae86"), "title" : "Spider man", "body" : "This is a post about the spider man", "author" : "Jane" }
+{ "_id" : ObjectId("60a3a8f22be9c800906fae87"), "titel" : "Super man", "body" : "This is a post about the super man" }
+> db.posts.updateOne({title:"A new blog post"}, {$set:{author:"Chuks"}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.posts.find()
+{ "_id" : ObjectId("60a3a5c92be9c800906fae84"), "title" : "A new blog post", "body" : "this is suppose to be the body of my new post", "author" : "Chuks" }
+{ "_id" : ObjectId("60a3a8f22be9c800906fae86"), "title" : "Spider man", "body" : "This is a post about the spider man", "author" : "Jane" }
+{ "_id" : ObjectId("60a3a8f22be9c800906fae87"), "titel" : "Super man", "body" : "This is a post about the super man" }
+> db.posts.deleteOne({titel:"Super man"})
+{ "acknowledged" : true, "deletedCount" : 1 }
+> db.posts.find()
+{ "_id" : ObjectId("60a3a5c92be9c800906fae84"), "title" : "A new blog post", "body" : "this is suppose to be the body of my new post", "author" : "Chuks" }
+{ "_id" : ObjectId("60a3a8f22be9c800906fae86"), "title" : "Spider man", "body" : "This is a post about the spider man", "author" : "Jane" }
+> db.posts.insertOne({title:"Marvel End Game", body:"This is about the entire marvel", author:"Jane"})
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("60a3b04d2be9c800906fae8a")
+}
+> db.posts.find()
+{ "_id" : ObjectId("60a3a5c92be9c800906fae84"), "title" : "A new blog post", "body" : "this is suppose to be the body of my new post", "author" : "Chuks" }
+{ "_id" : ObjectId("60a3a8f22be9c800906fae86"), "title" : "Spider man", "body" : "This is a post about the spider man", "author" : "Jane" }
+{ "_id" : ObjectId("60a3b04d2be9c800906fae8a"), "title" : "Marvel End Game", "body" : "This is about the entire marvel", "author" : "Jane" }
+> db.posts.find({author:"Jane"})
+{ "_id" : ObjectId("60a3a8f22be9c800906fae86"), "title" : "Spider man", "body" : "This is a post about the spider man", "author" : "Jane" }
+{ "_id" : ObjectId("60a3b04d2be9c800906fae8a"), "title" : "Marvel End Game", "body" : "This is about the entire marvel", "author" : "Jane" }
+> db.authors.find()
+{ "_id" : ObjectId("60a3a8752be9c800906fae85"), "name" : "Chuks", "age" : 24 }
+{ "_id" : ObjectId("60a3aaad2be9c800906fae88"), "name" : "Williams", "age" : 25 }
+{ "_id" : ObjectId("60a3aaad2be9c800906fae89"), "name" : "Jane", "age" : 19 }
+> db.authors.find({age < 25})
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:21
+> db.authors.find(age<25)
+uncaught exception: ReferenceError: age is not defined :
+@(shell):1:1
+> db.authors.find(author.forEach(age < 25))
+uncaught exception: ReferenceError: author is not defined :
+@(shell):1:1
+> db.authors.find({age:{$lt:25}})
+{ "_id" : ObjectId("60a3a8752be9c800906fae85"), "name" : "Chuks", "age" : 24 }
+{ "_id" : ObjectId("60a3aaad2be9c800906fae89"), "name" : "Jane", "age" : 19 }
+> db.authors.find({age:{$gt:25}})
+> db.authors.find({age:{$gt:24}})
+{ "_id" : ObjectId("60a3aaad2be9c800906fae88"), "name" : "Williams", "age" : 25 }
+>

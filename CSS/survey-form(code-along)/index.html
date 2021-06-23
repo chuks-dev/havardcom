@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="page">
+            <div class="title">
+                <h1>Chuksdev Survey</h1>
+                <p>Thank you for filling this survey</p>
+            </div>
+
+
+            <form action="#" id="survey-form">
+                <div class="form-control block-input">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" minlength="3" placeholder="Enter your first name" required>
+                </div>
+
+                <div class="form-control block-input">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" minlength="3" placeholder="Enter your favourite email" required>
+                </div>
+
+                <div class="form-control block-input">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" minlength="3" placeholder="How old are you" required>
+                </div>
+
+                <div class="form-control block-input">
+                    <label for="role">
+                        Which option best describes your current role?
+                    </label>
+                    <select name="role" id="role">
+                        <option value="Student">
+                            Student
+                        </option>
+                        <option value="Full Time Employee" selected>
+                            Full Time Employee
+                        </option>
+                        <option value="Prefer-not-to-say">
+                            Prefer not to say
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-control">
+                    <p>
+                        Would you recommend freeCodeCamp to a friend?
+                    </p>
+
+                    <div class="form-control">
+                        <input type="radio" name="recommendation" id="definitely">
+                        <label for="definitely">
+                            definitely
+                        </label>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="radio" name="recommendation" id="may-be">
+                        <label for="may-be">May be</label>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="radio" name="recommendation" id="not-sure">
+                        <label for="not-sure">Not sure</label>
+                    </div>
+
+                </div>
+
+                <div class="form-control">
+                    <p>What would you like us to improve? (Check all that apply)</p>
+
+                    <div class="form-control">
+                        <input type="checkbox" name="feedback" id="projects">
+                        <label for="projects">Projects</label>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="checkbox" name="feedback" id="challenges">
+                        <label for="challenges">Challenges</label>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="checkbox" name="feedback" id="Forum">
+                        <label for="Forum">Forum</label>
+                    </div>
+
+                </div>
+
+                <div class="form-control block-input">
+                    <label for="suggestion">Any comments or suggestions?</label>
+                    <textarea name="suggestion" id="suggestion" cols="30" rows="10"
+                        placeholder="Leave suggestions here"></textarea>
+                </div>
+
+                <div class="form-control">
+                    <button>submit</button>
+                </div>
+
+            </form>
+
+            <!-- <div class="box">
+                box
+            </div> -->
+
+        </div>
+
+
+    </main>
+</body>
+
+</html>

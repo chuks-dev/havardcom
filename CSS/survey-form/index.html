@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Survey Form by Chuksdev</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main id="main">
+    <header id="header">
+      <h1 id="title">Chuksdev Survey</h1>
+      <p id="description">Thank your for filling out this survey</p>
+    </header>
+    <form action="#" id="survey-form">
+      <div class="input-field">
+        <label for="name" id="name-label">
+          Name
+        </label>
+        <input type="text" name="name" id="name" placeholder="Enter your name" minlength="2" required />
+      </div>
+
+      <div class="input-field">
+        <label for="email" id="email-label">
+          Email
+        </label>
+        <input type="email" name="email" placeholder="Enter your email" id="email" required />
+      </div>
+
+      <div class="input-field">
+        <label for="age" id="number-label">
+          Age (optional)
+        </label>
+        <input type="number" name="age" placeholder="Age" min="13" max="80" id="number" />
+      </div>
+
+      <div class="input-field">
+        <label>Which option best describes your current role?</label>
+        <select name="role" id="dropdown">
+          <option value="Student "> Student</option>
+          <option value="Full time job "> Full time job</option>
+          <option value="Full time learner "> Full time learner</option>
+          <option value="Prefer not to say "> Prefer not to say</option>
+          <option value="Others "> Others</option>
+        </select>
+      </div>
+
+      <div class="input-field">
+        <label>Would you recommend freeCodeCamp to a friend?</label>
+        <div class="input-field-radio">
+          <input type="radio" name="recommend" value="Definitely" id="definitely" class="radio" checked />
+
+          <label for="definitely">
+            <span class="radio-button"></span>Definitely</label>
+        </div>
+        <div class="input-field-radio">
+          <input type="radio" name="recommend" value="Maybe" id="maybe" class="radio" />
+
+          <label for="maybe"> <span class="radio-button"></span> Maybe</label>
+        </div>
+
+        <div class="input-field-radio">
+          <input type="radio" name="recommend" value="Not sure" id="notsure" class="radio" />
+
+          <label for="notsure">
+            <span class="radio-button"></span>Not Sure</label>
+        </div>
+      </div>
+
+      <div class="input-field">
+        <label>What would you like us to improve? (Check all that apply)</label>
+        <div class="input-field-checkbox">
+          <input type="checkbox" name="projects" value="projects" id="projects" class="checkbox-input" checked />
+
+          <label for="projects">
+            <span class="checkbox"></span> Projects</label>
+        </div>
+        <div class="input-field-checkbox">
+          <input type="checkbox" name="Challenges" value="Challenges" id="Challenges" class="checkbox-input" />
+          <label for="Challenges">
+            <span class="checkbox"></span>Challenges</label>
+        </div>
+        <div class="input-field-checkbox">
+          <input type="checkbox" name="forum" value="forum" id="forum" class="checkbox-input" />
+          <label for="forum"> <span class="checkbox"></span>Forum</label>
+        </div>
+      </div>
+
+      <div class="input-field">
+        <label for="comments">Any comments or suggestions?</label>
+        <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Enter comments" minlength="3"
+          maxlength="150"></textarea>
+      </div>
+      <button id="submit">Submit</button>
+    </form>
+  </main>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>

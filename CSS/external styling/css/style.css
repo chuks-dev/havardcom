@@ -1,0 +1,33 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+
+header{
+    /* border: 4px solid #330ba3; */
+    height: 700px;
+    background: #a9dae2;
+    padding: 50px;
+
+}
+.hero{
+    /* border: 4px solid #0ba34a; */
+    
+}
+.hero h1{
+    color: #330ba3;
+    text-align: right;
+}
+
+#img{
+    width: 25%;
+}
+
+BOX Model
+

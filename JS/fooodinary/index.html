@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cook anything | Fooodinary.com</title>
+
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+    <main>
+        <div class="row">
+            <div class="col-md-3 border-end">
+                <div class="container">
+                    <div class="logo mt-4">
+                        <p class="logo__name mt-2">Fooodinary</p>
+                    </div>
+
+                    <div class="menu mt-5">
+                        <ul>
+                            <li class="mb-4" onclick="fetchMeals()">
+                                <i class="fa fa-book me-3"></i>
+                                <span>Recipes</span>
+                            </li>
+                            <li class="mb-4" onclick="getVegetarian()">
+                                <i class="fa fa-leaf me-3"></i>
+                                <span>Vegetarian only</span>
+                            </li>
+                            <li class="mb-4">
+
+
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa fa-cog me-3"></i>
+                                        <span>Setting</span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" onclick="clearData()">Clear Personal data</a></li>
+                                        <li><a class="dropdown-item">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="flexSwitchCheckChecked" onclick="toggleDarkMode()">
+                                                    <label class="form-check-label" for="flexSwitchCheckChecked">Dark
+                                                        mode</label>
+                                                </div>
+                                            </a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-6 page " id="middle-page">
+                <div class="container">
+
+                    <form class="mt-4 form d-flex justify-content-center align-items-center" id="search-form">
+                        <div
+                            class="form__search-control me-3 px-4 py-2 d-flex justify-content-center align-items-center">
+                            <i class="fa fa-search me-2"></i>
+                            <input class="pl-4" type="search" list="autoSuggestions" placeholder="Search for a recipe"
+                                id="search-term" required>
+                            <datalist id="autoSuggestions">
+                                <!-- <option value="Chicken Pepersoup"></option>
+                                <option value="Chicken soup"></option>
+                                <option value="Jollof Rice"></option>
+                                <option value="Amala"></option>
+                                <option value="Akwa Ibom Rice"></option> -->
+                            </datalist>
+                        </div>
+                        <div>
+                            <div class="dropdown">
+                                <button class=" py-2 form__dropdown-btn dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa fa-filter"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+
+                                    <li><a class="dropdown-item tags" id="dietary">Dietary</a></li>
+                                    <li><a class="dropdown-item tags" id="snacks">Snacks </a></li>
+                                    <li><a class="dropdown-item tags" id="ice_cream_scoop">Ice Cream Scoop</a></li>
+                                    <li><a class="dropdown-item tags" id="instant_pot">Instant pot</a></li>
+                                    <li><a class="dropdown-item tags" id="colander">Colander</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div id="page">
+
+
+                        <h1 class="page__title my-5"> Let's Start Cooking</h1>
+
+                        <div class="row g-4 page-cards" id="page-cards">
+
+                            <!-- <div class="col-11 recipe mx-auto">
+
+                                <div class="recipe__top border-bottom mb-3">
+                                    <img src="./img/food-pic.jpg" class="img-fluid mb-3 " alt="...">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h3>Indian coconut</h3>
+                                        <p> <i class="far fa-clock"></i> 30min</p>
+                                    </div>
+                                </div>
+
+                                <div class="row recipe__bottom">
+                                    <div class="col-md-3 border-end">
+                                        <h4 class="mb-3">Ingredients</h4>
+                                        <ul>
+                                            <li class="mb-3">Tomato Paste</li>
+                                            <li class="mb-3">1 Bowl of rice</li>
+                                            <li class="mb-3">Chicken Breast</li>
+                                            <li class="mb-3">3 Onions</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-9 recipe__bottom--steps">
+                                        <h4 class="mb-3">Steps</h4>
+                                        <ul>
+                                            <li class="mb-4">
+
+                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
+                                                laudantium! Quaerat doloribus earum blanditiis voluptatibus nostrum
+                                                perferendis, odit impedit voluptas eum ipsum modi neque consequuntur
+                                                alias ut natus, libero assumenda?
+                                            </li>
+                                            <li class="mb-4">
+
+                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
+                                                laudantium! Quaerat doloribus earum blanditiis voluptatibus nostrum
+                                                perferendis, odit impedit voluptas eum ipsum modi neque consequuntur
+                                                alias ut natus, libero assumenda?
+                                            </li>
+                                            <li class="mb-4">
+
+                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
+                                                laudantium! Quaerat doloribus earum blanditiis voluptatibus nostrum
+                                                perferendis, odit impedit voluptas eum ipsum modi neque consequuntur
+                                                alias ut natus, libero assumenda?
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div> -->
+
+                            <div class="d-flex justify-content-center mt-5">
+                                <div class="spinner-border  text-danger" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                            </div>
+
+                            <!-- <div class="col-lg-6">
+                                <div class="card p-2" style="width: 15rem;">
+                                    <img src="./img/food-pic.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and
+                                            make up the bulk of the card's content.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+
+                                            <i class="card-fav far fa-heart"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+
+
+            <div class="col-md-3 sidebar border-start">
+                <div class="container">
+                    <div class="sidebar__title mt-4 d-flex align-items-center">
+                        <i class="fa fa-heart me-3 "></i>
+                        <p class="mb-0">FAVOURITES</p>
+                    </div>
+
+
+                    <div class="row mt-5 gy-4" id="sidebar-cards">
+
+
+                        <!-- <div class="col-12">
+                            <div class="sidebar__card p-2 d-flex justify-content-center align-items-center">
+                                <div class="d-flex ">
+                                    <img src="./img/food-pic.jpg" alt="" class="me-3">
+                                    <div class="sidebar__card--content">
+                                        <h6>India coconut</h6>
+                                        <p>Learn to cook the best indian caricature ends...</p>
+                                    </div>
+                                    <i class="fa fa-times sidebar__card--close"></i>
+                                </div>
+                            </div>
+                        </div> -->
+
+
+
+                    </div>
+
+
+
+                    <div class="sidebar__note mt-5">
+                        <div class="sidebar__title mt-4 d-flex align-items-center">
+                            <i class="fa fa-sticky-note me-3 sidebar__note--icon"></i>
+                            <p class="mb-0">NOTES</p>
+                        </div>
+                        <textarea class="sidebar__note--input p-3 mt-4 " id="editor"></textarea>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./js/popper.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/home.js"></script>
+
+
+
+</body>
+
+</html>

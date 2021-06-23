@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+:root {
+  --color-primary: #4044c9;
+  --color-danger: #ff485c;
+  --color-grey: #f1f4f6;
+  --color-grey-dark: #272e35;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-grey);
+  padding: 10px 0;
+}
+
+.todo {
+  border-radius: 10px;
+  box-shadow: 0 6px 12px #a4c0d96b;
+  background: #fff;
+  min-height: 80vh;
+  width: 100%;
+  max-width: 375px;
+  overflow: hidden;
+}
+
+.container {
+  padding: 30px;
+  width: 100%;
+  max-width: 90%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo__top {
+  background: var(--color-primary);
+}
+
+.todo__top h1 {
+  color: var(--color-grey);
+  margin-bottom: 16px;
+}
+
+.todo__form {
+}
+
+.input-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo__form input {
+  border-radius: 4px;
+  border: none;
+  /* background: var(--color-grey); */
+  padding: 10px;
+  width: 75%;
+  outline: none;
+  box-shadow: 0 6px 12px #17263327;
+  margin-bottom: 5px;
+}
+
+#todo-error-message i {
+  color: red;
+}
+
+#submit-btn {
+  border-radius: 4px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background: #fff;
+  color: var(--color-primary);
+  transition: all 0.2s;
+}
+
+#submit-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px #02101b44;
+}
+
+#submit-btn:active {
+  transform: scale(1);
+  box-shadow: none;
+}
+
+.todo__bottom {
+  height: 100%;
+  max-height: 70vh;
+  overflow: scroll;
+}
+.todo__bottom::-webkit-scrollbar {
+  width: 1px;
+}
+
+.todo__bottom--list {
+  list-style: none;
+}
+
+.todo__bottom--item {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px #a4c0d954;
+  margin-bottom: 20px;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+
+.todo__bottom--item:hover {
+  background: var(--color-primary);
+  transform: scale(1.05);
+  color: #fff;
+  box-shadow: 0px 6px 12px #a4c0d954;
+}
+
+.todo__bottom--item p {
+  width: 70%;
+  text-align: center;
+}
+
+.check:checked ~ p {
+  opacity: 0.3;
+  text-decoration: line-through;
+}
+
+.delete-icon {
+  color: var(--color-danger);
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+.delete-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px #a4c0d96b;
+  color: #920314;
+}
+.delete-icon:active {
+  transform: scale(1);
+  color: var(--color-danger);
+  box-shadow: none;
+}

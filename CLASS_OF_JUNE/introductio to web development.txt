@@ -1,0 +1,18 @@
+Web development Roadmap
+
+Frontend = HTML, CSS and Javascript (Front end Trinity)
+	additional libraries (Bootstrap, AOS)
+Backed = Nodejs (Javascript runtime enviroment), Express
+	Databases (Mongodb)
+
+
+
+1.HTML = Hype Text Markup Language (Building block of a webpage)
+HTML is NOT a programming language.
+Easy to learn
+
+
+To write codes
+Text editor = basically a software that supports and highlight diffrent file extensions
+Enviroment to executwe our codes(Eg Web browser for front end codes).
+

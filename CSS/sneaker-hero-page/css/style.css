@@ -1,0 +1,131 @@
+/* teal: #608581 */
+/* darkblue: #414E5E */
+/* yellow: #FFAF25 */
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: roboto, arial, sans-serif;
+}
+
+
+
+nav{
+    height: 10vh;
+    background: #608581;
+    color: #fff;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__logo h4{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav__links{
+
+}
+
+.nav__links--list{
+  list-style: none;  
+}
+.nav__links--item{
+    display: inline-block;
+    margin-right: 64px;
+    font-size: 18px;
+}
+.nav__links--item a{
+    color: #fff;
+    text-decoration: none;
+    transition: all .2s ease-out;
+
+}
+.nav__links--item a:hover{
+    color: #FFAF25;
+    text-decoration: underline;
+}
+
+.header{
+    height: 90vh;
+   
+}
+
+.header__content{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__left{
+    width: 50vw;
+    padding: 0 100px;
+
+}
+
+.header__left--content{
+
+}
+.header__left--heading{
+    font-size: 100px;
+    font-style: italic;
+    font-weight: 900;
+}
+
+.header__left--text{
+    color: #414E5E;
+    margin-bottom: 20px;
+}
+
+.header__left--button{
+    width: 240px;
+    height: 60px;
+    border: none;
+    text-transform: uppercase;
+    background: #FFAF25;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    outline: none;
+}
+
+.header__left--button:hover{
+    background: #f0a422;
+    box-shadow: 0px 4px 12px rgba(18, 22, 27, 0.2);
+    transform: translateY(-5%);
+}
+
+.header__left--button:active{
+    transform: translateY(5%);
+
+}
+
+.header__right{
+    background: #414E5E;
+    height: 100%;
+    width: 50vw;
+    padding: 0 100px;
+
+}
+
+.header__right img{
+    /* filter: drop-shadow(); */
+    /* filter: grayscale(.6); */
+    /* filter: brightness(.5); */
+    /* filter: hue-rotate(180deg); */
+    filter: drop-shadow(0px 4px 6px rgba(6, 7, 8, 0.349));
+    /* box-shadow: 0px 4px 6px rgba(6, 7, 8, 0.349); */
+    margin-top: 50px;
+    transform: rotate(30deg);
+    /* transform: scale(0.5); */
+    /* transform: skew(15deg); */
+    /* transition: all .2s ease-in-out; */
+    
+}

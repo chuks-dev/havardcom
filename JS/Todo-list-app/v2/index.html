@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list app</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+
+
+
+</head>
+
+
+<body>
+
+    <main class="todo">
+        <div class="todo__top wrapper">
+            <div class="container">
+                <h1>My To-do List</h1>
+                <form id="todo-form" class="todo__form">
+
+                    <div class="input-container">
+                        <input type="text" placeholder="Enter a todo" id="todo-input">
+
+                        <button id="submit-btn">
+                            <i class="fa fa-plus"></i>
+                        </button>
+                    </div>
+                    <small id="todo-error-message">
+
+
+                    </small>
+
+
+                </form>
+            </div>
+        </div>
+
+
+        <div class="todo__bottom wrapper">
+
+            <div class="container">
+                <ul id="todo-list" class="todo__bottom--list">
+                    <!-- <li class="todo__bottom--item">
+                        <input type="checkbox" name="" id="" class="check">
+                        <p>Walk the dog</p>
+                        <i class="fa fa-trash-alt delete-icon "></i>
+                    </li> -->
+
+
+                </ul>
+            </div>
+
+        </div>
+
+
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- Desktop nav -->
+    <nav class="nav">
+        <div class="nav__logo">
+            <h3><span class="nav__logo--h">H</span>avardcom</h3>
+        </div>
+        <div class="nav__menu">
+            <ul class="nav__menu--list">
+                <li class="nav__menu--item"><a href="#" class="nav__menu--link">Home</a></li>
+                <li class="nav__menu--item"><a href="#" class="nav__menu--link">About</a></li>
+                <li class="nav__menu--item"><a href="#" class="nav__menu--link">Contact</a></li>
+                <li class="nav__menu--item"><a href="#" class="nav__menu--link">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Mobile Nav -->
+
+    <nav class="mobile__nav">
+        <div class="nav__logo">
+            <h3><span class="nav__logo--h">H</span>avardcom</h3>
+        </div>
+
+        <div class="mobile__nav--hamburger ">
+            <div class="mobile__nav--hamburger-line"></div>
+            <div class="mobile__nav--hamburger-line"></div>
+            <div class="mobile__nav--hamburger-line"></div>
+        </div>
+    </nav>
+
+
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <h1>Your Idea, Our Technology</h1>
+                <p>Up to 80% OFF Web Hosting plans</p>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+    <!-- Mobile Navigation menu -->
+    <div class="mobile__nav--menu">
+        <ul class="mobile__nav--menu--list">
+            <li class="mobile__nav--menu--item"><a href="#" class="mobile__nav--menu--link">Home</a></li>
+            <li class="mobile__nav--menu--item"><a href="#" class="mobile__nav--menu--link">About</a></li>
+            <li class="mobile__nav--menu--item"><a href="#" class="mobile__nav--menu--link">Contact</a></li>
+            <li class="mobile__nav--menu--item"><a href="#" class="mobile__nav--menu--link">Blog</a></li>
+        </ul>
+    </div>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, corporis ipsam dicta atque unde nihil
+        soluta ex commodi ea totam inventore nulla odio consectetur nostrum, at sed, necessitatibus ratione placeat.
+        Eligendi, omnis rem minus delectus magni doloremque totam provident ratione optio ut similique eos a.
+        Reprehenderit commodi voluptas sit similique sed fugiat numquam nam praesentium vel, aliquam ipsa consequuntur
+        doloremque quasi officiis soluta facilis? Nesciunt nisi quasi error optio impedit! Cum quibusdam minus
+        asperiores repellendus ex tempora aliquam est minima! Minus ut fuga id non consequatur magnam aliquid quaerat,
+        veritatis earum laboriosam, quam delectus magni porro? Blanditiis, quam consectetur suscipit ut fugit aspernatur
+        tenetur, in a architecto possimus enim mollitia vitae earum nesciunt numquam vero obcaecati soluta cum dicta
+        expedita autem dolor nihil quo harum? Nam tempora obcaecati maiores vitae quo eos quas modi qui quibusdam
+        laboriosam voluptatem, molestiae quasi similique porro? Quidem assumenda blanditiis ex eum accusamus, quasi
+        maxime doloribus expedita veritatis beatae nihil maiores neque accusantium minima alias velit placeat debitis
+        cumque soluta suscipit quibusdam facilis et? Tempora delectus perferendis possimus inventore praesentium et
+        provident alias id optio nemo vitae repellat, ea fuga mollitia molestias, deleniti eligendi temporibus dolorum
+        iste cumque tempore ullam perspiciatis nisi vel. Facere, blanditiis.
+    </p>
+
+    <script>
+        document.querySelector('.mobile__nav--hamburger').addEventListener('click', () => {
+            document.querySelector('.mobile__nav--menu').classList.toggle('toggle-nav');
+            document.querySelector('.mobile__nav--hamburger').classList.toggle('shownav');
+
+        })
+    </script>
+
+</body>
+
+</html>

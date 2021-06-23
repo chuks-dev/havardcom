@@ -1,0 +1,13 @@
+cd = change directory
+ls = list
+mkdir = make directory
+touch = create a new file
+code = open in vscode (vs code only)
+rm = remove/delete files
+
+
+flags = any command that has an hypen(-) before it
+rm -rf = remove a folder using the recursive flag (-rf)
+
+mv = moves from one directory to another
+cp = copy from one directory to another

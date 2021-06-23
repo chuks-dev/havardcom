@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@300;400&display=swap');
+
+body {
+  font-family: roboto, sans-serif;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto Slab', serif;
+}
+
+.menu {
+}
+
+.menu ul {
+  list-style: none;
+  color: #96939b;
+  padding: 0;
+}
+.menu li i {
+}
+
+.menu li {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.menu li:hover {
+  color: #a31621;
+}
+
+.menu li span {
+  font-size: 16px;
+}
+
+.page {
+  background: #fcf7f8;
+  height: 100vh;
+  transition: all 0.2s;
+}
+
+.form {
+}
+
+.form__search-control {
+  background: #fff;
+  width: 80%;
+  border-radius: 4px;
+  color: #96939b;
+}
+
+.form__search-control input {
+  outline: none;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form__dropdown-btn {
+  border: none;
+  background: #fff;
+  border-radius: 4px;
+  color: #96939b;
+}
+
+.sidebar__title i {
+  font-size: 20px;
+  color: #a31621;
+}
+
+#page {
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.page-cards {
+  margin-bottom: 100px;
+}
+
+.page__title {
+  color: #96939b;
+}
+
+/* Bootstrap overrides */
+.card-img-top {
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.card-fav {
+  font-size: 20px;
+  color: #a31621;
+  cursor: pointer;
+}
+
+#sidebar-cards {
+  height: 60%;
+  max-height: 40vh;
+  overflow-y: scroll;
+}
+
+.sidebar__card {
+  width: 100%;
+  background: #f5bc4b;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.sidebar__card img {
+  width: 54px;
+  height: 56px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+sidebar__card--content {
+}
+
+.sidebar__card h6 {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.sidebar__card p {
+  font-size: 14px;
+  line-height: 1;
+}
+.sidebar__card--close {
+  cursor: pointer;
+  color: #a31621;
+}
+
+.sidebar__note--icon {
+  color: #96939b !important;
+}
+
+.sidebar__note--input {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  transition: all 0.2s;
+  outline-color: #c0c0c0;
+}
+
+.recipe__top img {
+  height: 215px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.recipe__top i {
+  color: #a31621;
+}
+
+.recipe__bottom--steps span {
+  background: #a31621;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.recipe__bottom--steps ul {
+  list-style: none;
+  padding: 0;
+}
+.recipe__bottom--steps li {
+  display: flex;
+  align-items: flex-start;
+}
+
+.tags {
+  cursor: pointer;
+}
+
+/* Utility classes */
+.fade-out {
+  opacity: 0.5;
+}
+
+.dark-mode {
+  background: #030000;
+  color: #d3cfda !important;
+}

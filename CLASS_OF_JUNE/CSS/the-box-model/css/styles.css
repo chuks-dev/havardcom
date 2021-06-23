@@ -1,0 +1,22 @@
+.box {
+	width: 150px;
+	height: 150px;
+	background: red;
+	border: 5px solid black;
+	padding: 5px 10px;
+	margin: 10px;
+	font-size: 20px;
+	display: inline-block;
+	box-sizing: border-box;
+}
+
+.btn {
+	width: 150px;
+	background: blue;
+	padding: 10px;
+	margin: 10px;
+	border: none;
+	font-size: 16px;
+	border-radius: 4px;
+	text-transform: uppercase;
+}

@@ -1,0 +1,132 @@
+:root{
+    --primary-color: #21964A;
+    --primary-color-dark: #156330;
+    --secondary-color:#E40613;
+    --grey-color:#E8EDEA;
+    --grey-color-light:rgba(232, 237, 234, 0.5);
+    --box-shadow: 0px 6px 12px rgba(3, 15, 8, 0.2);
+    --animate: all .2s ease-in-out;
+}
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: roboto, arial, san-serif;
+    background: var(--grey-color);
+}
+
+main{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page{
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: var(--box-shadow);
+    padding: 50px;
+    min-width: 90%;
+    margin-top: 50px;
+    
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.title h1{
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.title p{
+    
+}
+
+#survey-form{
+
+}
+
+
+.block-input label{
+    display: block;
+    margin-bottom: 15px;
+}
+.block-input input, select, textarea{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid var(--primary-color);
+    outline: none;
+    padding: 10px;
+    background: var(--grey-color-light);
+    transition: var(--animate);
+}
+
+.block-input input:focus{
+    background: transparent;
+}
+.block-input input:invalid{
+    border-bottom: 2px solid var(--secondary-color);
+
+}
+
+.block-input input::placeholder{
+    /* color: red;
+    font-size: 20px; */
+}
+
+.form-control{
+    margin-bottom: 15px;
+}
+
+.form-control p{
+    margin-bottom: 15px;
+}
+
+.form-control button{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background: var(--primary-color);
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--animate);
+    
+
+
+}
+
+.form-control button:hover{
+    background:var(--primary-color-dark);
+}
+
+
+/* .box{
+    margin-top: 50px;
+    width: 100px;
+    height: 100px;
+    background: #eee;
+    border: 2px solid black; 
+     border-radius: 14px;
+    outline: 2px solid black;
+    outline-offset: 20px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    
+}
+
+
+.box:hover{
+    outline-offset: 0;
+    transform: scale(1.1);
+} */
