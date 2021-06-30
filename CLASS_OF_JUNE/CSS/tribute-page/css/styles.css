@@ -18,7 +18,6 @@ body {
 	justify-content: center;
 	text-align: center;
 }
-
 .header__title {
 	margin-bottom: 20px;
 }
@@ -94,7 +93,7 @@ body {
 	background: #fff;
 	color: #380ef7;
 	border: 1px solid #000;
-	transition: all 0.2 ease-in-out;
+	transition: box-shadow 0.2s ease-in-out;
 }
 .card__content button:hover {
 	box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);

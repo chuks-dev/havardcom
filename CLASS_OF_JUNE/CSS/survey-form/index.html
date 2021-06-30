@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey-form</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <main class="main">
+        <div class="main__heading">
+            <h1>Chuksdev Survey</h1>
+            <p>Thank you for filling out the survey</p>
+        </div>
+
+
+        <form action="#" id="survey-form">
+            <div class="form__field">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" minlength="3" required>
+            </div>
+            
+            <div class="form__field">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form__field">
+                <label for="age">Age</label>
+                <input type="number" id="age" placeholder="How old are you" required>
+            </div>
+
+            <div class="form__field">
+                <label for="role">Which option best describes your current role?</label>
+                <select  id="role">
+                    <option value="Student">Student</option>
+                    <option value="Full Time Job">Full Time Job</option>
+                    <option value="Full Time Learner" selected>Full Time Learner</option>
+                    <option value="Prefer Not To Say">Prefer Not To Say</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+
+
+            <div class="tick-box">
+                <p>Would you recommend freeCodeCamp to a friend?</p>
+                <div class="tick-box__option">
+                    <input type="radio" name="recommendation" id="definetly">
+                    <label for="definetly">Definetly</label>
+                </div>
+                <div class="tick-box__option">
+                    <input type="radio" name="recommendation" id="no">
+                    <label for="no">No</label>
+                </div>
+                <div class="tick-box__option">
+                    <input type="radio" name="recommendation" id="maybe">
+                    <label for="maybe">May Be</label>
+                </div>
+            </div>
+
+            <div class="tick-box">
+                <p>What would you like us to improve? (Check all that applies)</p>
+                <div class="tick-box__option">
+                    <input type="checkbox" name="feedback" id="projects">
+                    <label for="projects">Projects</label>
+                </div>
+                <div class="tick-box__option">
+                    <input type="checkbox" name="feedback" id="challenges">
+                    <label for="challenges">Challenges</label>
+                </div>
+                <div class="tick-box__option">
+                    <input type="checkbox" name="feedback" id="forum">
+                    <label for="forum">Forum</label>
+                </div>
+            </div>
+
+
+            <div class="form__field">
+                <label for="suggestions">Any comments or suggestions?</label>
+                <textarea  rows="10" type="number" id="suggestions" placeholder="Enter Suggestions"></textarea>
+            </div>
+
+            <button>Submit</button>
+        </form>
+    </main>
+</body>
+</html>
