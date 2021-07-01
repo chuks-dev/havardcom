@@ -1,0 +1,36 @@
+body {
+	font-family: roboto, arial;
+}
+
+h1 {
+	color: red;
+	text-align: center;
+}
+
+p {
+	color: blue;
+	font-size: 20px;
+}
+
+#important {
+	color: red;
+}
+
+.image {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+}
+
+.box {
+	background: red;
+	width: 50%;
+	height: 150px;
+	margin-bottom: 5px;
+}
+
+.small-box {
+	background: green;
+	height: 75px;
+	width: 50%;
+}
