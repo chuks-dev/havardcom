@@ -1,0 +1,106 @@
+body {
+	/* background: linear-gradient(to bottom left, red 50%, green 30%, blue); */
+	/* background: radial-gradient(red, blue); */
+	background-color: #0093e9;
+	background: linear-gradient(
+			160deg,
+			rgba(0, 148, 233, 0.9) 0%,
+			rgba(128, 208, 199, 0.95) 100%
+		),
+		url('../img/bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* animation-name: bg-change;
+	animation-duration: 3s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite; */
+	/* animation: bg-change 3s ease-in 3s infinite; */
+}
+
+.square-container {
+	background: rgba(0, 0, 0, 0.123);
+	width: 768px;
+	min-height: 450px;
+	position: relative;
+}
+
+.square {
+	width: 150px;
+	height: 150px;
+	background: red;
+	border-radius: 4px;
+	position: absolute;
+}
+
+.square:nth-child(1) {
+	z-index: 3;
+}
+.square:nth-child(2) {
+	background: green;
+	left: 10%;
+	z-index: 5;
+}
+.square:nth-child(3) {
+	background: blue;
+	top: 10%;
+	z-index: 4;
+}
+.box {
+	width: 50px;
+	height: 50px;
+	background: red;
+	animation: moving-box 1s ease-out infinite;
+	border-radius: 4px;
+}
+
+@keyframes moving-box {
+	0% {
+		transform: translateX(0px) scale(0.5);
+	}
+
+	25% {
+		transform: translateX(100px) rotate(90deg) scale(1.4);
+		background: green;
+	}
+
+	50% {
+		transform: translateX(100px) translateY(100px) rotate(180deg) scale(0.5);
+		background: blue;
+	}
+
+	75% {
+		transform: translateX(0px) translateY(100px) rotate(270deg) scale(1.4);
+		background: yellow;
+	}
+
+	100% {
+		transform: translateX(0px) translateY(0px) rotate(360deg) scale(1.5);
+		background: pink;
+	}
+}
+
+@keyframes bg-change {
+	0% {
+		background: red;
+	}
+
+	25% {
+		background: green;
+	}
+
+	50% {
+		background: blue;
+	}
+
+	75% {
+		background: yellow;
+	}
+
+	100% {
+		background: pink;
+	}
+}
