@@ -52,13 +52,43 @@ app.get('/authors', (req, res) => {
 		});
 });
 
-app.get('/users', (req, res) => {
-	res.json({ message: "You are in search of the users ain't you?" });
+app.post('/new-author', (req, res) => {
+	let newAuthor = new Author({
+		name: req.body.name,
+		age: req.body.age,
+	});
+
+	newAuthor
+		.save()
+		.then(result => {
+			res.json('Author saved successfully');
+		})
+		.catch(err => {
+			res.json(err);
+		});
 });
 
-app.post('/user', (req, res) => {
-	console.log(req.body);
-	res.json({ message: 'your request was successful' });
+app.post('/author', (req, res) => {
+	Author.findById(req.body.authorId)
+		.then(response => {
+			res.json(response);
+		})
+		.catch(err => {
+			console.log(err);
+		});
+});
+
+app.post('/update-author', (req, res) => {
+	Author.findByIdAndUpdate(req.body.authorId, {
+		name: req.body.name,
+		age: req.body.age,
+	})
+		.then(response => {
+			res.json('item updated successfully');
+		})
+		.catch(err => {
+			console.log(err);
+		});
 });
 
 // root route

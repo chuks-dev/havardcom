@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body onload="getAuthors()">
+		<h1>Posts and Authors</h1>
+
+		<form action="#" id="author-form">
+			<h3>Add a new author</h3>
+			<input type="text" placeholder="Enter author's name" id="author-name" />
+			<input type="number" placeholder="Enter author's age" id="author-age" />
+			<button class="add-author-btn">add author +</button>
+		</form>
+
+		<p>Below are the list of authors on our domain</p>
+		<ul id="author-list"></ul>
+
+		<script>
+			// variables
+			const authorList = document.querySelector('#author-list');
+			const authorForm = document.querySelector('#author-form');
+			const authorName = document.querySelector('#author-name');
+			const authorAge = document.querySelector('#author-age');
+			const addAuthorBtn = document.querySelector('.add-author-btn');
+
+			//event listeners
+			authorForm.addEventListener('submit', e => {
+				e.preventDefault();
+			});
+
+			addAuthorBtn.addEventListener('click', e => {
+				let authorInfo = {
+					name: authorName.value,
+					age: authorAge.value,
+				};
+
+				if (e.target.id.length > 1) {
+					fetch('http://localhost:3000/update-author', {
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/json',
+						},
+						body: JSON.stringify({
+							authorId: e.target.id,
+							name: authorInfo.name,
+							age: authorInfo.age,
+						}),
+					})
+						.then(response => {
+							return response.json();
+						})
+						.then(author => {
+							console.log(author);
+							authorList.innerHTML = '';
+							getAuthors();
+						})
+						.catch(err => {
+							console.log(err);
+						});
+				} else {
+					fetch('http://localhost:3000/new-author', {
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/json',
+						},
+						body: JSON.stringify(authorInfo),
+					})
+						.then(response => {
+							return response.json();
+						})
+						.then(author => {
+							console.log(author);
+							authorList.innerHTML = '';
+							getAuthors();
+						});
+				}
+			});
+
+			//functions
+			function getAuthors() {
+				fetch('http://localhost:3000/authors')
+					.then(res => {
+						return res.json();
+					})
+					.then(authors => {
+						console.log(authors);
+						authors.forEach(author => {
+							authorList.insertAdjacentHTML(
+								'afterbegin',
+								`<li>${author.name}(${author.age})    <button  onclick="getAuthor('${author._id}')">Edit Author</button></li>`,
+							);
+						});
+					})
+					.catch(err => {
+						console.log(err);
+					});
+			}
+
+			function getAuthor(authorId) {
+				fetch('http://localhost:3000/author', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify({ authorId }),
+				})
+					.then(response => {
+						return response.json();
+					})
+					.then(author => {
+						authorName.value = author.name;
+						authorAge.value = author.age;
+						addAuthorBtn.textContent = 'update author';
+						addAuthorBtn.id = author._id;
+					});
+			}
+		</script>
+	</body>
+</html>
