@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Ticket</title>
+    <style>
+        *{
+            padding:0;
+            margin:0 auto;
+        }
+
+        body{
+            background-color: #56636c;
+            max-width: 800px;
+            margin:0 auto;
+            padding:3%;
+            font-family: roboto, sans-serif;
+            font-size: 19px;
+            
+        }
+
+        h1,h2,h3,h4,h5,h6{
+            font-family: raleway, sans-serif;
+        }
+
+        #wrapper{
+            background-color:#dad8d8;
+            padding:3%;
+
+        }
+        .header, .main{
+            width: 80%;
+            border-radius:8px;
+            border: 2px solid #0e121b;
+            margin-bottom: 50px;
+            padding:3%;
+
+        }
+
+
+        .header>img{
+            width:50px;
+            float:left;
+        }
+        .header>h3{
+            margin:10px;
+            float:right;
+        }
+
+        .highlight{
+            font-weight: 800;
+            color: #0e121b;
+            margin: 0 10px;
+        }
+        
+        .main p{
+            margin-bottom: 3%;
+            line-height: 1.6;
+        }
+
+        .qrcode img{
+            border: 2px solid #0e121b;
+            display: block;
+            margin: 50px auto;
+            width: 150px;
+            height: 150px;
+        }
+
+
+        .footer{
+            width: 80%;
+            font-size: 15px;
+        }
+        .footer > h3{
+            margin-bottom:10px;
+        }
+
+        .footer >ul{
+            list-style: none;
+        }
+        .footer >ul > li{
+            margin-bottom: 20px;
+        }
+        .footer >ul > li::before{
+            content:'-'
+        }
+
+
+        .clear{
+            clear: both;
+        }
+
+
+        @media (max-width:400px) {
+            .header>h3{
+            font-size: 18px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="header">
+            <img src="./img/user.png" alt="">
+            <h3>Hello Emmanuel</h3>
+            <div class="clear"></div>
+        </div>
+
+        <div class="main">
+
+            <p>Thank you for your recent order for the movie<span class="highlight">No Time to Die (2 Tickets)</span>amounting to <span class="highlight">N5500</span>,you can redeem your ticket(s) at the cinema using this Booking ID <span class="highlight">939039309</span></p>
+
+            <div class="qrcode">
+                <img src="./img/qrcode.png" alt="">
+            </div>
+        </div>
+
+
+        <div class="footer">
+            <h3> Special messages: e.g Pick up information </h3>
+            <ul>
+                <li>
+                    Please come to the cinema to collect your tickets at least 35 minutes prior to the start of the movie.
+                </li>
+                <li>
+                    Show your reservation emails at the cinema ticketing stands
+                </li>
+                <li>
+                    Those will be verified and you will receive your tickets and/or food & drink items (as applicable)
+                </li>
+                <li>
+                    Alternatively, bring your: * Credit/Debit card together * This email and/or your Booking ID/number in order to collect your tickets at the cinema
+                </li>
+                <li>
+                    You can find your receipt attached to this mail.
+                </li>
+            </ul>
+                
+
+                
+
+                <p>
+                    <b>
+                        Thank You,
+                        Your Viewpoint Support Team
+                    </b>
+                </p>
+        </div>
+    </div>
+</body>
+</html>

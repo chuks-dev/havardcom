@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <form action="https://google.com">
+        <div>
+            <label for="firstname">Name</label>
+            <input type="text" placeholder="Enter your first name" value="John" minlength="2" maxlength="15"
+                id="firstname" name="firstname" required>
+        </div>
+        <div>
+            <label for="">Age</label>
+            <input type="number" placeholder="How old are you" name="age">
+        </div>
+        <div>
+            <label for="">password</label>
+            <input type="password" placeholder="Enter a password you can remember" required>
+
+        </div>
+        <div>
+            <label for="">Email</label>
+            <input type="email" placeholder="Enter your Favourite email" value="youremail@email.com" required>
+        </div>
+        <div>
+            <label for="">Tel</label>
+            <input type="tel" placeholder="What's your phone number">
+        </div>
+        <div>
+            <label for="">bio</label>
+            <textarea placeholder="Tell us a little about yourself" required></textarea>
+        </div>
+
+        <h5>Please select your gender</h5>
+        <div>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" id="others" value="others">
+            <label for="others">Otherss</label>
+        </div>
+
+        <h5>Which of this best describes you (Select all the applies)</h5>
+        <div>
+            <input type="checkbox" name="status" id="developer" value="Developer">
+            <label for="developer">Developer</label>
+        </div>
+        <div>
+            <input type="checkbox" name="status" id="designer" value="designer">
+            <label for="designer">designer</label>
+        </div>
+        <div>
+            <input type="checkbox" name="status" id="copywriter" value="copywriter">
+            <label for="copywriter">copywriter</label>
+        </div>
+        <div>
+            <input type="checkbox" name="status" id="Brand Strategist" value="Brand Strategist">
+            <label for="Brand Strategist">Brand Strategist</label>
+        </div>
+
+        <h5>Which of these would you like us to improves</h5>
+        <div>
+            <select name="suggestion" id="suggestion">
+                <option value="Project">Project</option>
+                <option value="Challenge">Challenge</option>
+                <option value="Forum">Forum</option>
+            </select>
+        </div>
+
+        <div>
+            <input type="submit" value="Submit your info">
+        </div>
+
+    </form>
+</body>
+
+</html>

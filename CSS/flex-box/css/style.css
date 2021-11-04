@@ -1,0 +1,40 @@
+.container{
+    display: flex;
+    /* flex-direction: column-reverse; */
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+*{
+    margin: 0;
+}
+
+.box{
+    background: #ff6347;
+    width: 23%;
+
+    /* margin: 10px 5px 10px 5px; */
+    margin:10px 5px;
+    /* padding: 10px 5px 10px 5px; */
+    padding:10px 5px;
+    
+}
+.box:first-child{
+    height: 150px;
+
+}
+
+.box:nth-child(2){
+    height: 85px;
+
+}
+
+
+.box:last-child{
+    height: 160px;
+
+}
+
+
+

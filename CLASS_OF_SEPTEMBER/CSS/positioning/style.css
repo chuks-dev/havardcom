@@ -1,0 +1,67 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+body{
+    font-family: roboto, sans-serif;
+    padding:10px;
+    
+}
+
+.container{
+    width:600px;
+    height:300px;
+    background: lightgrey;
+    position:relative;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,255,0.5)),url('../img/dubia.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* .container::after{
+    content: "";
+    background: rgba(0,0,0,0.5);
+    width:100%;
+    height: 100%;
+    display: block;
+} */
+
+
+.box{
+    text-align: center;
+    color:white;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
+
+}
+
+
+.red{
+    width: 50px;
+    height: 50px ;
+    background:red;
+    position:fixed;
+    bottom:10px;
+    right:10px;
+
+}
+
+#p-tag{
+    background: red;
+    width:fit-content;
+    padding:10px;
+    transform: translateX(50px) translateY(50px);
+} 
+
+/* #p-tag::before{
+    content:"This is before the P tag---";
+    color:red;
+}
+#p-tag::after{
+    content:" ---After the P tag!!! ";
+    color:blue;
+} */

@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    /* font-size: 200%; */
+    font-size: 62.5%;
+    /* font-size: 42.5%; */
+}   
+
+body{
+    
+    font-family: roboto;
+    /* font-size: 1.6rem; */
+    font-size: 20px;
+}
+
+main{
+padding: 10px;
+/* background: linear-gradient(to right, rgb(238, 173, 31), rgb(201, 11, 11), rgb(61, 182, 5)); */
+/* background: linear-gradient(to bottom right, rgb(238, 173, 31), rgb(172, 118, 4), rgb(156, 107, 2)); */
+/* background: radial-gradient( rgb(238, 173, 31), rgb(172, 118, 4), rgb(156, 107, 2)); */
+/* background: url('../img/drone.jpg'); */
+background: linear-gradient( to right, rgba(31, 8, 8, 0.5),rgba(31, 8, 8, 0.5)),url('../img/drone.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+main h1{
+
+    font-size: 10rem;
+    font-weight: 900;
+    color: transparent;
+    background: linear-gradient(to right , rgba(255, 255, 255, 0.733)5%, rgba(255, 255, 255, 0)95%);
+    -webkit-background-clip:text;
+    background-clip: text;
+}
+
+
+section{
+    height: 100vh;
+    padding: 5rem;
+}
+
+section p{
+    color: red;
+    font-size: 6rem;
+}
+
+address{
+    font-size: 3em;
+}

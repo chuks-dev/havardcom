@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms in HTML</title>
+    </head>
+    <body>
+        <h1>Forms in HTML</h1>
+
+        <form action="http://google.com">
+            <label for="name">Name:</label>
+            <input id="name" type="text" value="John Doe">
+            <br>
+            <label for="age">Age:</label>
+            <input id="age" type="number" required>
+            <br>
+            <label for="email">email:</label>
+            <input id="email" type="email" placeholder="Enter your favourite email address" required>
+            <br>
+            
+            <label for="password">password:</label>
+            <input id="password" type="password">
+            <br>
+
+
+            <p>Which of these best describes you (choose all that applies)</p>
+
+            <input id="student" type="checkbox" checked>
+            <label for="student">Student</label>
+            <input id="developer" type="checkbox">
+            <label for="developer">Developer</label>
+            <input id="designer" type="checkbox">
+            <label for="designer">Designer</label>
+            <input id="business-owner" type="checkbox">
+            <label for="business-owner">Business Owner</label>
+
+
+            <p>Select your gender</p>
+
+            <input name="gender" id="male" type="radio" checked>
+            <label for="male">Male</label>
+
+            <input name="gender" id="female" type="radio">
+            <label for="female">Female</label>
+            
+            <input name="gender" id="others" type="radio">
+            <label for="others">Others</label>
+            <br>
+
+            <p>Select your acount type:</p>
+            <select>
+    
+                <option value="Checking">Checking</option>
+                <option value="Savings" selected>Savings</option>
+                <option value="Current">Current</option>
+            </select>
+
+            <br>
+
+
+            <label for="message">Leave a message here</label>
+            <br>
+            <textarea id="message" cols="100" rows="20">This is supposed to be your message</textarea>
+            <input type="submit" value="Send">
+
+
+        </form>
+
+    </body>
+</html>

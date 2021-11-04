@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list app</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+</head>
+<body>
+
+    <main class="todo-list">
+        <div class="todo-list__left">
+            <h1>My Todo List</h1>
+
+            <form action="#" id="todo-form">
+                <div id="error">
+
+                </div>
+               
+
+                <input type="text" placeholder="Enter a todo" id="todo-input">
+
+                <button type="submit">Add</button>
+            </form>
+
+        </div>
+        <div class="todo-list__right">
+            <ul id="todo-list">
+                
+                
+              <!-- <li>
+                   <span>
+                       <input type="checkbox" id="todo-checkbox">
+                       <span>Go Shopping</span>
+                   </span>
+                    <i class="fas fa-trash-alt" id="delete-btn"></i> 
+                   
+                </li> -->
+             </ul>
+
+            <button id="clear-todo"> <i class="fas fa-trash-alt"></i> Clear all todos</button>
+
+        </div>
+    </main>
+
+
+  
+    <script src="./js/script.js"></script>
+</body>
+</html>

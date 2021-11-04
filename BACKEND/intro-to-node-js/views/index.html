@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Nodejs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: roboto, sans-serif;
+            display: flex;
+        }
+
+        main {
+            height: 100vh;
+            background: #96939b;
+            width: 100%;
+
+        }
+
+        aside {
+            background: #564256;
+            height: 100vh;
+            width: 30%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            transition: .2s all ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: translateX(150%);
+
+        }
+
+        .menu {
+            height: 10vh;
+            background: #fff;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hamburger {
+            background: #564256;
+            height: 40px;
+            width: 40px;
+            border-radius: 4px;
+            padding: 15px;
+            cursor: pointer;
+            transform: scale(.8);
+            transition: .2s all ease-out;
+        }
+
+        .hamburger:hover {
+            transform: scale(1);
+            box-shadow: 0 6px 12px rgba(86, 66, 86, 0.502);
+
+        }
+
+        .hamburger:active {
+            transform: scale(.8);
+
+        }
+
+        ul {
+            list-style: none;
+            margin-right: 15px;
+            color: aliceblue;
+        }
+
+
+        a {
+            color: inherit;
+        }
+
+        .show-aside {
+            transform: translateX(0%);
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="menu">
+            <div class="logo">WEB</div>
+            <div class="hamburger" onclick="toggleNav()"></div>
+        </div>
+    </main>
+    <aside>
+        <ul>
+            <li><a href="Home">Home</a></li>
+            <li><a href="Home">About</a></li>
+            <li><a href="Home">Contact</a></li>
+            <li><a href="Home">Blog</a></li>
+        </ul>
+    </aside>
+
+
+    <script>
+        function toggleNav() {
+            document.querySelector('aside').classList.toggle('show-aside')
+        }
+    </script>
+</body>
+
+</html>

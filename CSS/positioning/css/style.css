@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: roboto;
+}
+
+header{
+    background: #FBF3F8;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+.container{
+    transform: translateY(-20%);
+}
+
+.header__heading{
+    font-size: 10rem;
+    font-family: bilbo;
+    
+}
+
+.header__watch{
+    display: flex;
+    width: 50%;
+}
+
+
+.header__watch--title{
+    color: #C0B4BC;
+    margin-right: 3rem;
+
+}
+.header__watch--cta{
+    color: #FF57D7;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ff57d7;
+}
+
+.header__watch--cta p {
+    margin-right: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.hamburger{
+    width: 75px;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+
+}
+
+.hamburger__line{
+    
+    background:#FF57D7;
+    height: 1rem;
+    margin-bottom: 1.1rem;
+}
+
+.cta{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background: #ff57d7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10%;
+    transform: rotate(90deg);
+    cursor: pointer;
+
+}
+.cta i{
+    font-size: 3rem;
+    color: #fff;
+}
+
+main{
+    height: 100vh;
+    background: rgb(160, 154, 154);
+    position: relative;
+
+
+}
+
+.main-container{
+    background: rgb(207, 31, 31);
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.box{
+
+}

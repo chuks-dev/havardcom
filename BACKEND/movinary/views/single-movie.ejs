@@ -1,0 +1,25 @@
+<%- include('./partials/header')  %>
+<div class="container my-5" style="min-height: 60vh;">
+
+
+    <div class="row">
+        <div class="col-md-3">
+            <img src=<%=movie.image  %> alt="">
+        </div>
+        <div class="col-md-9">
+            <h1 class="mb-4"><%=movie.title  %> </h1>
+            <div class="d-flex bg-light p-5 mb-5">
+                <div class="me-5">
+                    <h4>Genre :<%= movie.genre  %> </h4>
+                </div>
+                <div>
+                    <h4>Duration :<%=movie.duration %> </h4>
+                </div>
+
+            </div>
+            <p> <%=movie.description  %> </p>
+            <a href="/update-movie/<%=movie._id  %> " class="btn btn-dark mt-5">Edit Movie</a>
+        </div>
+    </div>
+</div>
+<%- include('./partials/footer')  %>

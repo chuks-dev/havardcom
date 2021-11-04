@@ -1,0 +1,57 @@
+<%- include('./partials/header')  %>
+<div class="container mt-5 ">
+    <h2 class="text-center mb-5">Update this movie</h2>
+    <form action="/update-movie" method="POST">
+        <div class="row gy-2 gx-4">
+            <div class="col-6">
+                <div class="mb-3">
+                    <label for="Title" class="form-label">Title</label>
+                    <input type="text" class="form-control" name="title" value="<%=movie.title %>">
+                </div>
+            </div>
+            <div class=" col-6">
+                <div class="mb-3">
+                    <label for="Title" class="form-label">Duration</label>
+                    <input type="text" class="form-control" name="duration" value="<%=movie.duration %>">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="mb-3">
+                    <label for="Title" class="form-label">Image</label>
+                    <input type="text" class="form-control" name="image" value="<%=movie.image %>">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="mb-3">
+                    <label for="Title" class="form-label">Genre</label>
+                    <select type="text" class="form-select" name="genre" value="<%=movie.genre %>">
+                        <option value="Action">Action</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Romance">Romance</option>
+                    </select>
+                </div>
+            </div>
+            <input type="hidden" name="id" value="<%=movie._id%>">
+            <div class="col-12">
+                <div class="mb-3">
+                    <label for="Title" class="form-label">Description</label>
+                    <textarea class="form-control" style="height: 200px;"
+                        name="description"><%=movie.description %></textarea>
+                </div>
+            </div>
+            <div class="col-12 mb-5">
+                <button class="btn btn-primary" name="btn" value="update">Update</button>
+                <button class="btn btn-danger" name="btn" value="delete">Delete</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+
+
+
+
+
+<%- include('./partials/footer')  %>

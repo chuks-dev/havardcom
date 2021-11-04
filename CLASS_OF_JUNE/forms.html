@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Forms </title>
+</head>
+
+<body>
+    <h1>Forms</h1>
+    <form action="https://google.com">
+        <div>
+            <label for="name">
+                Name
+            </label>
+            <input type="text" value="John Doe" required>
+        </div>
+        <div>
+            <label for="email">
+                Email
+            </label>
+            <input type="email" placeholder="Enter your fav email" required>
+        </div>
+        <div>
+            <label for="DOB">
+                DOB
+            </label>
+            <input type="date" required>
+        </div>
+        <div>
+            <label for="password">
+                Password
+            </label>
+            <input type="password">
+        </div>
+        <div>
+            <p>Whats your gender</p>
+            <input type="radio" id="male" name="gender">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" checked>
+            <label for="female">Female</label>
+            <input type="radio" id="others" name="gender">
+            <label for="others">Others</label>
+        </div>
+        <div>
+            <p>Which of these describes you (Check all that applies)</p>
+            <input type="checkbox" id="student" checked> <label for="student">Student</label>
+            <input type="checkbox" id="Developer"> <label for="Developer">Developer</label>
+            <input type="checkbox" id="Designer"> <label for="Designer">Designer</label>
+            <input type="checkbox" id="Instructor"> <label for="Instructor">Instructor</label>
+        </div>
+
+        <div>
+            <p>Pick a course you will be interested in</p>
+            <select>
+                <option>Web development</option>
+                <option>Graphics Design</option>
+                <option>UI/UX design</option>
+                <option selected>Ethical Hacking</option>
+            </select>
+        </div>
+
+        <div>
+            <p>Do you have any suggestions? Leave a message below</p>
+            <textarea cols="50" rows="10"></textarea>
+        </div>
+
+        <button>Send</button>
+    </form>
+
+
+
+</body>
+
+</html>

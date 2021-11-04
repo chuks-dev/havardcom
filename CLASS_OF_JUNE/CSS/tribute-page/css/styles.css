@@ -1,0 +1,100 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #f0f8ff;
+	color: #0f0344;
+	font-family: roboto, sans-serif;
+}
+
+.header {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.header__title {
+	margin-bottom: 20px;
+}
+
+.header__title h1 {
+	font-size: 80px;
+	font-weight: 400;
+	letter-spacing: 20px;
+}
+
+.header__title p {
+	word-spacing: 5px;
+	letter-spacing: 5px;
+}
+.header__picture img {
+	width: 900px;
+}
+
+.header__picture p {
+	word-spacing: 7px;
+}
+
+.main {
+	padding: 50px;
+}
+
+.main__heading {
+	background: #0f0344;
+	color: #fff;
+	text-align: center;
+	padding: 5px;
+	font-size: 50px;
+	word-spacing: 10px;
+	letter-spacing: 10px;
+	font-weight: 400;
+	text-transform: capitalize;
+}
+
+.card__container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 50px;
+}
+
+.card {
+	display: flex;
+	justify-content: space-between;
+	width: 45%;
+	padding: 10px;
+	/* margin: 0px 10px 0px 0px; */
+}
+
+.card__image {
+}
+
+.card__content {
+	width: 60%;
+}
+
+.card__content h3 {
+	margin-bottom: 10px;
+	font-weight: 400;
+}
+
+.card__content p {
+	margin-bottom: 10px;
+}
+
+.card__content button {
+	padding: 5px 10px;
+	cursor: pointer;
+	background: #fff;
+	color: #380ef7;
+	border: 1px solid #000;
+	transition: box-shadow 0.2s ease-in-out;
+}
+.card__content button:hover {
+	box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+}

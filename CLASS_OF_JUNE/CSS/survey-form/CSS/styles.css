@@ -1,0 +1,96 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+
+body {
+	font-family: roboto, sans-serif;
+	background: #ebecf0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #3d3e3f;
+}
+
+.main {
+	width: 80%;
+	margin: 50px;
+	padding: 20px;
+	background: #fff;
+	min-height: 100vh;
+	box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.main__heading {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.main__heading h1 {
+	font-weight: 400;
+	letter-spacing: 4px;
+}
+.main__heading p {
+	letter-spacing: 2px;
+}
+
+#survey-form {
+}
+
+.form__field,
+.tick-box {
+	margin-bottom: 15px;
+}
+
+.form__field label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.form__field input,
+select,
+textarea {
+	display: block;
+	padding: 7px;
+	border: none;
+	border-bottom: 2px solid #0552aa;
+	background: #edeef2;
+	width: 100%;
+	transition: background 0.2s ease-in-out;
+}
+
+.form__field input:focus {
+	background: #fff;
+}
+.form__field input:invalid {
+	border-color: #dc3545;
+}
+.tick-box__option {
+	margin: 10px 0;
+}
+
+.tick-box input {
+	margin-right: 20px;
+}
+
+#survey-form button {
+	background: #0552aa;
+	color: #fff;
+	width: 100%;
+	padding: 10px;
+	cursor: pointer;
+	border: none;
+	transition: all 0.2s ease-out;
+}
+#survey-form button:hover {
+	background: #034999;
+	box-shadow: 0 6px 12px rgba(3, 73, 153, 0.377);
+}
+
+#survey-form button:active {
+	box-shadow: none;
+}
+
+/* DRY = Don't repeat yourself */

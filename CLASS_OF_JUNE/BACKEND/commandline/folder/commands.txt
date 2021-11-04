@@ -1,0 +1,14 @@
+Commands (unix/windows)
+
+
+whoami = shows current user
+cd = change directory
+pwd = shows current path
+ls/dir = list files/directories
+touch = add new files
+mkdir = create new directory
+cp = copy
+rm = remove
+mv = move
+rm -rf = delete directory
+ls -a = show hidden directory

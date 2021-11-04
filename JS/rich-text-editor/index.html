@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rich text editor</title>
+    <style>
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        #content {
+            max-width: 600px;
+            width: 100%;
+            height: 278px;
+            margin: 15px;
+            padding: 15px;
+            border: 1px solid #333;
+            border-radius: 4px;
+
+        }
+    </style>
+</head>
+
+<body onload="initDesignMode">
+
+    <main>
+        <div>
+            <button onclick="formatDoc('bold')"><strong>B</strong></button>
+            <button onclick="formatDoc('italic')">
+                <em>I</em>
+            </button>
+            <button onclick="formatDoc('underline')"><u>U</u></button>
+            <button onclick="formatDoc('cut')">Cut</button>
+        </div>
+        <div id="content" contenteditable="true">
+            Start writing...
+        </div>
+    </main>
+
+
+
+
+    <script>
+        function initDesignMode() {
+            document.designMode = 'On'
+        }
+
+        function formatDoc(cmd) {
+            document.execCommand(cmd, false, null)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: roboto;
+}
+
+.header{
+    min-height: 70vh;
+    background: linear-gradient( rgba(0,0,0,.5),rgba(0,0,0,.5)),url('../img/courses-hero-img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__title{
+    background: rgba(255, 255, 255, 0.9);
+    width: 50%;
+    padding: 5rem;
+    cursor: pointer;
+    transition: all .2s ease-in;
+    outline: 3px solid rgba(255, 255, 255, 0.9);
+    outline-offset: 2rem;
+}
+
+.header__title:hover{
+    background: #fff;
+    outline-offset: 0;
+    outline-color: #fff ;
+}
+
+.header__title h1{
+    margin-bottom: 1rem;
+    font-size: 5rem;
+}
+
+
+.header__title p{
+    font-size: 2rem;
+}
+
+.courses{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.courses__title{
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.courses__title h1{
+    font-size: 5rem;
+}
+
+
+.courses__cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.courses__cards--item{
+width: 30%;
+margin-bottom: 5rem;
+border: 1px solid #eee;
+box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.336);
+transition: all .2s ease-out;
+cursor: pointer;
+    
+}
+.courses__cards--item:hover{
+box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.445);
+transform: scale(1.1);
+
+}
+.courses__cards--item:active{
+box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.336);
+transform: scale(1);
+
+}
+
+
+.courses__cards--item-top{
+    height: 30rem;
+    overflow: hidden;
+
+}
+.courses__cards--item-top img{
+    width: 100%;
+}
+
+.courses__cards--item-bottom{
+    padding: 2rem;
+}
+.courses__cards--item--bottom-title{
+    margin: 4rem 0;
+}
+.courses__cards--item--bottom-title p{
+    color: #8b8a8a;
+    margin-bottom: 2rem;
+}
+
+.courses__cards--item--bottom-title h3{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.courses__cards--item-bottom-icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.courses__cards--item-bottom-icons-items{
+    display: flex;
+}
+
+.courses__cards--item-bottom-icons-items i{
+    margin-right: 1rem;
+    color: rgb(13, 79, 223);
+}
+.courses__cards--item-bottom-icons-items p{
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+
+
+
+
+/* utility class */
+.container{
+    max-width: 136.6rem;
+    width: 100%;
+}
+
+
+
+/* phone view */
+/* 0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop */
+
+
+
+/* bid desktop */
+@media only screen and (min-width: 1800px){
+
+}
+
+/* tablet-landscape */
+@media only screen and (max-width: 1200px){
+
+}
+
+
+
+/* tablet-portrait */
+@media only screen and (max-width: 900px){
+    .header .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header__title{
+        width: 90%;
+        outline:none;
+    }
+    
+
+    .courses__cards{
+        justify-content: space-around;
+    }
+
+.courses__cards--item{
+width: 40%;
+margin-bottom: 5rem;
+border: 1px solid #eee;
+box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.336);
+transition: all .2s ease-out;
+cursor: pointer;
+    
+}
+
+
+}
+
+/* Phone */
+@media (max-width: 600px){
+   html{
+       font-size: 50%;
+   }
+
+   .courses__cards{
+        flex-direction: column;
+    }
+
+    .courses__cards--item{
+        width: 90%;
+    }
+}

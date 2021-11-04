@@ -1,0 +1,48 @@
+body {
+	font-family: roboto, sans-serif;
+}
+
+.title {
+	text-align: center;
+	font-size: 50px;
+	font-weight: 500;
+	
+}
+.card-container {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.card {
+	background: rgb(245, 225, 44);
+	width: 200px;
+	height: 300px;
+	border-radius: 4px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+.card img {
+	height: 184px;
+}
+
+.card-content {
+	text-align: center;
+}
+
+.card-content h3 {
+	margin: 10px 0;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+.card-content p {
+	margin: 0;
+	margin-bottom: 10px;
+	color: rgb(199, 9, 9);
+}

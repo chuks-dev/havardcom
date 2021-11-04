@@ -1,0 +1,54 @@
+<%- include('./partials/header')  %>
+<div class="container mt-5 ">
+    <h2 class="text-center mb-5">Add A movie</h2>
+    <form action="/add-movie" method="POST">
+        <div class="row gy-2 gx-4">
+            <div class="col-6">
+                <div class="mb-3">
+                    <label for="Title" class="form-label">Title</label>
+                    <input type="text" class="form-control" name="title">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="mb-3">
+                    <label for="Title" class="form-label">Duration</label>
+                    <input type="text" class="form-control" name="duration">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="mb-3">
+                    <label for="Title" class="form-label">Image</label>
+                    <input type="text" class="form-control" name="image">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="mb-3">
+                    <label for="Title" class="form-label">Genre</label>
+                    <select type="text" class="form-select" name="genre">
+                        <option value="Action">Action</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Romance">Romance</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="mb-3">
+                    <label for="Title" class="form-label">Description</label>
+                    <textarea type="text" class="form-control" style="height: 200px;" name="description"></textarea>
+                </div>
+            </div>
+            <div class="col-12 mb-5">
+                <button class="btn btn-primary" style="width: 100%;">Submit</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+
+
+
+
+
+<%- include('./partials/footer')  %>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weather App</title>
+		<link rel="stylesheet" href="./css/styles.css" />
+		<link rel="stylesheet" href="./css//all.min.css" />
+	</head>
+	<body onload="onBodyLoad()">
+		<div id="loader">
+			<img src="./img/infinity.gif" alt="" width="500px" />
+		</div>
+		<main class="weather">
+			<div class="weather__left">
+				<div class="weather__left--logo">
+					<h3>our weather</h3>
+				</div>
+
+				<div class="weather__left--status">
+					<h1 id="weather-temp">16&deg;</h1>
+					<div class="weather__left--location">
+						<h3>London</h3>
+						<p>06:09 - Monday, 9 Sept 2021</p>
+					</div>
+					<div class="weather__left--icon">
+						<i class="fa fa-cloud"></i>
+						<p>Cloudy</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="weather__right">
+				<div class="weather__right--details">
+					<h3>Weather Details</h3>
+					<ul>
+						<li>
+							<h4>Cloudy</h4>
+							<p>86%</p>
+						</li>
+						<li>
+							<h4>Cloudy</h4>
+							<p>86%</p>
+						</li>
+						<li>
+							<h4>Cloudy</h4>
+							<p>86%</p>
+						</li>
+						<li>
+							<h4>Cloudy</h4>
+							<p>86%</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</main>
+		<script src="./js/script.js"></script>
+	</body>
+</html>

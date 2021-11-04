@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: roboto, arial, sans-serif;
+}
+
+main{
+    background: red;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-size: 100px;
+    font-weight: 900;
+    color: antiquewhite;
+    transition: all .2s ease-in-out;
+    /* animation-name: color-light;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; */
+    animation: color-light 5s ease-in-out infinite ;
+    
+    /* animation-timing-function:cubic-bezier(1,-0.06,0,1.04); */
+    
+
+}
+
+
+
+
+
+
+/* keyframes */
+
+@keyframes color-light{
+    0%{
+        color: antiquewhite;
+        transform: scale(1);
+        text-shadow: 0 4px 6px rgba(34, 24, 24, 0.0);
+
+    }
+
+    25%{
+        color: #29335C;
+        transform: scale(1.025);
+        text-shadow: 0 4px 6px rgba(34, 24, 24, 0.25);
+
+
+    }
+
+    50%{
+        color: #F3A712;
+        transform: scale(1.05);
+        text-shadow: 0 4px 8px rgba(34, 24, 24, 0.50);
+        padding: 30px;
+        border: 4px solid #29335C;
+
+
+    }
+
+    75%{
+        color:#A8C686 ;
+        transform: scale(1.075);
+        text-shadow: 0 4px 10px rgba(34, 24, 24, 0.75);
+
+
+    }
+
+    100%{
+        color: #669BBC;
+        transform: scale(1.1);
+        text-shadow: 0 4px 12px rgba(34, 24, 24, 1);
+        padding: 5px;
+        border: 4px solid #29335C;
+
+
+    }
+
+
+
+
+}

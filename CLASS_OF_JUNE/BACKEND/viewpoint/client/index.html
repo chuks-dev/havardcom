@@ -1,0 +1,392 @@
+<!-- This comment shows I am working in the chuksdev branch -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to viewpoint</title>
+    <link rel="stylesheet" href="./css/bootstrap-grid.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+</head>
+<body onload="initApp()"> 
+   
+    <nav class="nav">
+        <div class="nav__logo">
+            <h3>viewpoint</h3>
+        </div>
+
+        <div class="nav__search">
+            <i class="fa fa-search"></i>
+            <input type="search" placeholder="Search of a movie">
+        </div>
+
+        <div class="nav__fav btn" onclick="toggleFavMovies()">
+            <i class="fa fa-bookmark"></i> Show Saved
+        </div>
+    </nav>
+    <header class="header">
+        <div class="header__content">
+                <h1>Protage</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ullam aperiam, nisi voluptatibus eos esse alias fugiat laboriosam, hic pariatur aspernatur quaerat.</p>
+                <button class="btn btn-secondary btn-lg">Get Ticket</button>
+                <button class="btn btn-primary btn-lg" title="Save movie for later" onclick=" addMovieToFavourite()">
+                    <i class="far fa-bookmark" ></i>
+                    
+                </button>
+        </div>
+
+        <div class="header__watch" onclick="showModal('https://www.youtube.com/embed/QxMBHi_ZiT8', 'header')" >
+            
+            <div class="header__watch--icon">
+                <i class="fa fa-play"></i>
+            </div>
+            <span>Watch Movie Trailer</span>
+        </div>
+
+    </header>
+
+    <main class="main">
+        <div class="movie__filter">
+            <ul class="movie__filter--list">
+                <li class="movie__filter--item">
+                    Action
+                </li>
+                <li class="movie__filter--item">
+                    Comedy
+                </li>
+                <li class="movie__filter--item active-filter">
+                    Fantasy
+                </li>
+                <li class="movie__filter--item">
+                    Horror
+                </li>
+                <li class="movie__filter--item">
+                    Romance
+                </li>
+            </ul>
+        </div>
+
+        <div class="movies">
+            
+          <!--   <div class="movie__container">
+                <div class="movie__container--thumbnail">
+                    <img src="./img/img-1.jpg" alt="image title">
+                
+                    <div class="movie__container--icon">
+                    <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <div class="movie__container--details">
+                    <h1>Protage</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ullam aperiam, nisi voluptatibus eos esse alias fugiat laboriosam, hic pariatur aspernatur quaerat.
+                    </p>
+                    <button class="btn btn-secondary">Get Ticket</button>
+                    <button class="btn btn-primary">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="movie__container">
+                <div class="movie__container--thumbnail">
+                    <img src="./img/img-2.jpg" alt="image title">
+                
+                    <div class="movie__container--icon">
+                    <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <div class="movie__container--details">
+                    <h1>Shang chi</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ullam aperiam, nisi voluptatibus eos esse alias fugiat laboriosam, hic pariatur aspernatur quaerat.
+                    </p>
+                    <button class="btn btn-secondary">Get Ticket</button>
+                    <button class="btn btn-primary">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="movie__container">
+                <div class="movie__container--thumbnail">
+                    <img src="./img/img-3.jpg" alt="image title">
+                
+                    <div class="movie__container--icon">
+                    <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <div class="movie__container--details">
+                    <h1>The Unthinkable</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ullam aperiam, nisi voluptatibus eos esse alias fugiat laboriosam, hic pariatur aspernatur quaerat.
+                    </p>
+                    <button class="btn btn-secondary">Get Ticket</button>
+                    <button class="btn btn-primary">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="movie__container">
+                <div class="movie__container--thumbnail">
+                    <img src="./img/img-4.jpg" alt="image title">
+                
+                    <div class="movie__container--icon">
+                    <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <div class="movie__container--details">
+                    <h1>Radioactive</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ullam aperiam, nisi voluptatibus eos esse alias fugiat laboriosam, hic pariatur aspernatur quaerat.
+                    </p>
+                    <button class="btn btn-secondary">Get Ticket</button>
+                    <button class="btn btn-primary">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="movie__container">
+                <div class="movie__container--thumbnail">
+                    <img src="./img/img-5.jpg" alt="image title">
+                
+                    <div class="movie__container--icon">
+                    <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <div class="movie__container--details">
+                    <h1>Deep Blue Sea 2</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ullam aperiam, nisi voluptatibus eos esse alias fugiat laboriosam, hic pariatur aspernatur quaerat.
+                    </p>
+                    <button class="btn btn-secondary">Get Ticket</button>
+                    <button class="btn btn-primary">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="movie__container">
+                <div class="movie__container--thumbnail">
+                    <img src="./img/img-6.jpg" alt="image title">
+                
+                    <div class="movie__container--icon">
+                    <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <div class="movie__container--details">
+                    <h1>The Outsider</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ullam aperiam, nisi voluptatibus eos esse alias fugiat laboriosam, hic pariatur aspernatur quaerat.
+                    </p>
+                    <button class="btn btn-secondary">Get Ticket</button>
+                    <button class="btn btn-primary">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="movie__container">
+                <div class="movie__container--thumbnail">
+                    <img src="./img/img-7.jpg" alt="image title">
+                
+                    <div class="movie__container--icon">
+                    <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <div class="movie__container--details">
+                    <h1>Yakuza Princess</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ullam aperiam, nisi voluptatibus eos esse alias fugiat laboriosam, hic pariatur aspernatur quaerat.
+                    </p>
+                    <button class="btn btn-secondary">Get Ticket</button>
+                    <button class="btn btn-primary">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="movie__container">
+                <div class="movie__container--thumbnail">
+                    <img src="./img/img-8.jpg" alt="image title">
+                
+                    <div class="movie__container--icon">
+                    <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <div class="movie__container--details">
+                    <h1>The Courier</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ullam aperiam, nisi voluptatibus eos esse alias fugiat laboriosam, hic pariatur aspernatur quaerat.
+                    </p>
+                    <button class="btn btn-secondary">Get Ticket</button>
+                    <button class="btn btn-primary">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="movie__container">
+                <div class="movie__container--thumbnail">
+                    <img src="./img/img-9.jpg" alt="image title">
+                
+                    <div class="movie__container--icon">
+                    <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <div class="movie__container--details">
+                    <h1>Coven</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ullam aperiam, nisi voluptatibus eos esse alias fugiat laboriosam, hic pariatur aspernatur quaerat.
+                    </p>
+                    <button class="btn btn-secondary">Get Ticket</button>
+                    <button class="btn btn-primary">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="movie__container">
+                <div class="movie__container--thumbnail">
+                    <img src="./img/img-10.jpg" alt="image title">
+                
+                    <div class="movie__container--icon">
+                    <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <div class="movie__container--details">
+                    <h1>The Tomorrow War</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ullam aperiam, nisi voluptatibus eos esse alias fugiat laboriosam, hic pariatur aspernatur quaerat.
+                    </p>
+                    <button class="btn btn-secondary">Get Ticket</button>
+                    <button class="btn btn-primary">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="movie__container">
+                <div class="movie__container--thumbnail">
+                    <img src="./img/img-11.jpg" alt="image title">
+                
+                    <div class="movie__container--icon">
+                    <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <div class="movie__container--details">
+                    <h1>Us Again</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ullam aperiam, nisi voluptatibus eos esse alias fugiat laboriosam, hic pariatur aspernatur quaerat.
+                    </p>
+                    <button class="btn btn-secondary">Get Ticket</button>
+                    <button class="btn btn-primary">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="movie__container">
+                <div class="movie__container--thumbnail">
+                    <img src="./img/img-12.jpg" alt="image title">
+                
+                    <div class="movie__container--icon">
+                    <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <div class="movie__container--details">
+                    <h1>Kon Tiki</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ullam aperiam, nisi voluptatibus eos esse alias fugiat laboriosam, hic pariatur aspernatur quaerat.
+                    </p>
+                    <button class="btn btn-secondary">Get Ticket</button>
+                    <button class="btn btn-primary">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+            -->
+            
+        </div> 
+    </main>
+
+    <div class="fav-movies ">
+        
+
+        <!-- <div class="fav-movies__container">
+            <div class="fav-movies__container--left">
+                <img src="./img/img-1.jpg" alt="image">
+            </div>
+            <div class="fav-movies__container--right">
+                <h3>Shang chi</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quam est, provident enim perferendis...
+                </p>
+                <div class="fav-movies__container--right-btn">
+                     <button class="btn btn-grey-outline">Get Ticket</button>
+                    <button class="btn btn-danger">
+                        <i class="fa fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="fav-movies__container">
+            <div class="fav-movies__container--left">
+                <img src="./img/img-2.jpg" alt="image">
+            </div>
+            <div class="fav-movies__container--right">
+                <h3>Shang chi</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quam est, provident enim perferendis...
+                </p>
+                <div class="fav-movies__container--right-btn">
+                     <button class="btn btn-grey-outline">Get Ticket</button>
+                    <button class="btn btn-danger">
+                        <i class="fa fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="fav-movies__container">
+            <div class="fav-movies__container--left">
+                <img src="./img/img-2.jpg" alt="image">
+            </div>
+            <div class="fav-movies__container--right">
+                <h3>Shang chi</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quam est, provident enim perferendis...
+                </p>
+                <div class="fav-movies__container--right-btn">
+                     <button class="btn btn-grey-outline">Get Ticket</button>
+                    <button class="btn btn-danger">
+                        <i class="fa fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="fav-movies__container">
+            <div class="fav-movies__container--left">
+                <img src="./img/img-2.jpg" alt="image">
+            </div>
+            <div class="fav-movies__container--right">
+                <h3>Shang chi</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quam est, provident enim perferendis...
+                </p>
+                <div class="fav-movies__container--right-btn">
+                     <button class="btn btn-grey-outline">Get Ticket</button>
+                    <button class="btn btn-danger">
+                        <i class="fa fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div> -->
+
+
+    </div>
+
+    <div class="alert">
+        <p class="alert-text">Movie already added to favorites</p>
+        <div class="alert-close"><i class="fa fa-times"></i></div>
+    </div>
+
+    
+    <script src="./js/main.js"></script>
+</body>
+</html>
+
+

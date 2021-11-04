@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Viewpoint</title>
+    <link rel="stylesheet" href="./css/bootstrap-grid.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+</head>
+<body onload="initApp()">
+   <main class="admin-main">
+       <div class="admin-main__top">
+           <h1>Welcome Back, Admin.</h1>
+        <button class="btn btn-grey btn-grey-outline">See Frontend</button>
+       </div>
+       <div class="admin-main__bottom">
+           <div class="form-control">
+               <input type="search" placeholder="Search for a movie">
+           </div>
+           <div class="admin-main__bottom--movies" id="movieWrapper">
+                   <!-- <img src="./img/img-1.jpg" alt="">
+                   <img src="./img/img-2.jpg" alt="">
+                   <img src="./img/img-4.jpg" alt="">
+                   <img src="./img/img-5.jpg" alt="">
+                   <img src="./img/img-6.jpg" alt="">
+                   <img src="./img/img-7.jpg" alt="">
+                   <img src="./img/img-8.jpg" alt="">
+                   <img src="./img/img-9.jpg" alt="">
+                   <img src="./img/img-10.jpg" alt="">
+                   <img src="./img/img-11.jpg" alt=""> -->
+                   
+           </div>
+       </div>
+   </main> 
+
+    <!-- <div class="modal admin ">
+        <div class="modal__container">
+            <form class="add-movie__form" action="#">
+                <div class="form-control">
+                    <label for="title">Title</label>
+                    <input type="text" id="Title" placeholder="Whats the title for this movie?">
+                </div>
+                <div class="form-control">
+                    <label for="thumbnail">Thumbnail</label>
+                    <input type="text" id="thumbial" placeholder="Enter Image URL for thumbnail">
+                </div>
+                <div class="form-control">
+                    <label for="trailer">Trailer</label>
+                    <input type="text" id="trailer" placeholder="Enter Youtube link for the movie Trailer">
+                </div>
+                <div class="form-control">
+                    <label for="cost">Ticket Cost</label>
+                    <input type="number" id="cost" placeholder="How much does the movie cost?">
+                </div>
+                 <div class="form-control">
+                    <label for="cost">Tags</label>
+                    <input type="text" id="tags" placeholder="Enter Tags for movie.">
+                    <small>Separate tags with a comma ( , ) e.g. horror,action,fantasy.</small>
+                </div>
+                <div class="form-control">
+                    <label for="description">Description</label>
+                    <textarea id="description" cols="30" rows="10" placeholder="Enter description for this movie"></textarea>
+                </div>
+                <div class="form-control">
+                    <button class="btn btn-grey btn-block">Add Movie</button>
+                </div>
+               
+            </form>
+        </div>
+
+
+
+        <div class="modal__left--close" onclick="closeModal()">
+                <i class="fa fa-times"></i>
+        </div>
+    </div> -->
+
+
+     <div class="alert">
+        <p class="alert-text">Movie already added to favorites</p>
+        <div class="alert-close"><i class="fa fa-times"></i></div>
+    </div>
+
+    <script src="./js/admin.js"></script>
+   
+</body>
+</html>

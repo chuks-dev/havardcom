@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViewPoint Email</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            color: #000000;
+        }
+
+        body{
+            font-family: sans-serif;
+            background-color: #2196f3;
+            max-width: 800px;
+            padding:3%;
+            margin: auto;
+            line-height: 1.6;
+
+
+        }
+
+
+        .container{
+            background-color: #ffffff;
+            min-height: 50vh;
+        }
+
+        header{
+            background-color: #56636c;
+            padding:3% !important;
+        }
+
+        .header h3{
+            float:right;
+            margin-top: 10px;
+            font-size: 20px;
+            color: #ffffff;
+        
+        }
+
+        #avatar{
+            border:2px solid #2196f3;
+            width: 50px;
+            height: 50px;
+            border-radius:50%;
+            position: relative;
+            float: left;
+            
+        }
+
+
+
+        .main{
+            padding:3%;
+
+        }
+
+        .main p{
+            margin: 15px 0;
+        }
+
+        .info{
+            padding: 3%;
+        }
+
+        .info h3{
+            margin-bottom: 20px;
+        }
+
+        .info ul{
+            width: 90%;
+        }
+
+        .info ul li{
+            margin-bottom: 20px;
+        }
+
+        .main img{
+            width: 150px;
+            display:block;
+            margin:30px auto;
+            border:1px solid #2196f3
+        }
+
+        .footer{
+            text-align: center;
+            padding:3%;
+            color: grey;
+
+        }
+
+        .highlight{
+            color: #2196f3;
+            font-weight: 700;
+        }
+
+        hr{
+            width: 95%;
+            margin: auto;
+        }
+
+        .clear{
+            clear: both;
+        }
+
+        
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="https://romantic-joliot-428934.netlify.app/img/user.png" alt="" id="avatar">
+            <h3>Hello Emmanuel</h3>
+           <div class="clear"></div>
+        </header>
+
+
+
+        <main class="main">
+            <p>
+                Thank you for your recent order for the movie <span class="highlight">${title}</span> (<span class="highlight">${numberOfTickets}</span> Ticket(s))amounting to <span class="highlight">N${totalAmount}</span>,you can redeem your ticket(s) at the cinema using this Booking ID <span class="highlight">${id}</span>
+            </p>
+            
+            <img src="https://ci5.googleusercontent.com/proxy/6atIivp5XIYIqn4r6gN05vrN8oVuPgQMuxpJxGBjXw4xeooAKNGmvpt05b6wuBRUuUxJuSVX47NXZxbt5vU5tEkw-U15FSDp1Lj0SS8KPzM_Sk_kBmnMvfSqxNpg6ZjuQHM5xD03vQ=s0-d-e1-ft#http://res.cloudinary.com/chuksdev/image/upload/v1635507725/cxrfb9vlb5dvavpii7ad.png" alt="">
+
+
+            <div class="info">
+                <h3>Special messages: e.g Pick up information</h3>
+
+                <ul>
+                    <li>Please come to the cinema to collect your tickets at least 35 minutes prior to the start of the movie.</li>
+
+                    <li>Show your reservation emails at the cinema ticketing stands</li>
+
+                    <li>Those will be verified and you will receive your tickets and/or food & drink items (as applicable)
+                    </li>
+
+                    <li>Alternatively, bring your: * Credit/Debit card together * This email and/or your Booking ID/number in order to collect your tickets at the cinema</li>
+
+                    <li>You can find your receipt attached to this mail.</li>
+                </ul>
+            </div>
+
+        </main>
+
+        <hr>
+        <footer class="footer">
+            <p>Thank You, Your Viewpoint Support Team</p>
+        </footer>
+    </div>
+</body>
+</html>

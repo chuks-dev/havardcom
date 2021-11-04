@@ -1,0 +1,187 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: roboto;
+}
+
+
+
+
+.container{
+    max-width: 136.6rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.wrapper{
+    width: 100%;
+    height: 50rem;
+    background-color: green;
+    /* display: flex; */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.box{
+    width: 20rem;
+    height: 20rem;
+    background-color: red;
+    position: relative;
+    border: 4px  solid #000;
+    text-align: center;
+    font-size: 20rem;
+
+}
+
+.box:first-child{
+    background: rgb(35, 86, 196);
+    z-index: 1;
+    
+
+}
+
+.box:nth-child(2){
+    margin-top:  -30px;
+    z-index: 4;
+
+}
+
+
+.box:last-child{
+    background: rgb(20, 194, 179);
+        margin-top:  -30px;
+        z-index: 8;
+        
+
+}
+
+
+.dot{
+    width: 30rem;
+    height: 5rem;
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+}
+
+
+/* Pets page css starts here */
+.pets-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    /* background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(0, 0, 0, 0.616)), url('../img/hero.jpg'); */
+    background: url('../img/hero.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.pets-header::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.699);
+}
+
+.pets-header h1{
+    font-size: 10rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    background: rgb(228, 4, 172);
+    color: #fff;
+    z-index: 100;
+}
+
+.pets-about{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pets-about__left{
+    width: 50%;
+}
+
+.pets-about__left h1{
+    font-size: 10rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.pets-about__right{
+    width: 50%;
+}
+
+.pets-about__right--collage{    
+    position: relative;
+    width: 100%;
+    
+}
+.pets-about__right--collage img{
+    width: 20rem;
+    outline: .7rem solid rgb(228, 4, 172);
+    cursor: pointer;
+    transition: all .2s ease-out;
+    position: relative;
+}
+.pets-about__right--collage img:hover{
+        box-shadow: 4px 6px 20px rgba(145, 4, 117, 0.671);
+        outline-offset: 15px;
+        z-index: 2;
+
+}
+.pets-about__right--collage img:active{
+        box-shadow: 4px 6px 20px rgba(145, 4, 117, 0.123);
+        outline-offset: 0;
+        z-index: 1;
+
+}
+
+
+
+.pets-about__right--collage img:first-child{
+    transform: translate(5rem, 10rem);
+}
+.pets-about__right--collage img:first-child:hover{
+    transform: translate(5rem, 10rem) scale(1.1);
+
+}
+.pets-about__right--collage img:nth-child(2):hover{
+    transform:scale(1.1);
+}
+.pets-about__right--collage img:last-child{
+    transform: translate(-5rem, -10rem);
+
+}
+.pets-about__right--collage img:last-child:hover{
+    transform: translate(-5rem, -10rem) scale(1.1);
+
+}
+
+::selection{
+    background: rgb(228, 4, 172);
+    color: #fff;
+}

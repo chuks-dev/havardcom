@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: roboto, arial, sans-serif;
+}
+header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background: url('../img/background.jpg') ;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.register{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.register__content{
+
+}
+
+.register__content--heading{
+    font-size: 80px;
+    font-weight: 900;
+}
+
+.register__content--text{
+    word-spacing: 2px;
+    font-size: 20px;
+}
+
+.register__form{
+    background: rgba(255, 255, 255, 0.5);
+    padding: 50px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 9px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.register__form--controls{
+    margin-bottom: 20px;
+    
+}
+.register__form--controls label{
+    display:block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+
+.register__form--controls input{
+    border: none;
+    padding: 20px;
+    width: 100%;
+    border-radius: 4px;
+    background: #c7dde1;
+}
+
+.register__form--controls button{
+    width: 100%;
+    padding: 20px;
+    border-radius: 4px;
+    border: none;
+    background:#2b91f7;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.register__form--controls button:hover{
+    background:#1d6fc2;
+
+}
+
+#terms{
+    width: fit-content;
+}
+
+#terms-label{
+    display: inline;
+    font-size: 12px;
+}
+
