@@ -15,6 +15,10 @@ app.use(movieRouter);
 
 const ticketRouter = require('./routes/ticketRouter');
 app.use(ticketRouter);
+
+const fileRouter = require('./routes/fileRouter');
+app.use(fileRouter);
+
 const PORT = 3000;
 
 app.listen(PORT, () => {
