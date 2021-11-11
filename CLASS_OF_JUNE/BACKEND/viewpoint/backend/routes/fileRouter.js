@@ -13,8 +13,13 @@ const storage = multer.diskStorage({
 
 
 const upload = multer({storage});
+
 router.post('/upload', upload.single('image'), (req, res) => {
 	console.log(req.file);
+	// console.log(req.body);
+
+	// const newUpload = {	...req.body,path:req.file.path}
+	// console.log(newUpload);
 	res.json(req.file);
 });
 
