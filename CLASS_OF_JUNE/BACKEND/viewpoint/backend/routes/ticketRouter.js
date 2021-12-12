@@ -90,7 +90,7 @@ router.post('/validate-payment', (req, res) => {
 					.then(() => {
 						// Upload QRCode to cloudinary
 						cloudinary.uploader
-							.upload(path.join(__dirname, `../qrcodes/${txref}.png`),{folder:'viewpoint/qrcodes'})
+							.upload(path.join(__dirname, `../qrcodes/${txref}.png`))
 							.then(result => {
 								//update  ticket details if payment (extra info from flutterwave and qrcode from cloudindary)
 								Ticket.findByIdAndUpdate(txref, {

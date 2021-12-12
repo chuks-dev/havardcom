@@ -25,7 +25,6 @@ function showAddMovieModal(){
                 <div class="form-control">
                     <label for="img">img</label>
                     <input type="text" id="img" placeholder="Enter Image URL for img" required>
-                    <button class="btn btn-primary" onclick="showMediaModal(event)">Upload Image</button>
                 </div>
                 <div class="form-control">
                     <label for="trailer">Trailer</label>
@@ -57,72 +56,6 @@ function showAddMovieModal(){
         </div>
     </div>
     `)
-}
-
-
-function showMediaModal(e){
-    e.preventDefault();
-    document.querySelector('body').insertAdjacentHTML('beforeend',`
-         <div class="modal uploads show-modal ">
-        <div class="modal__container">
-            <div class="uploads__left">
-                <img src="./img/img-1.jpg" alt="">
-                <img src="./img/img-2.jpg" alt="">
-                <img src="./img/img-3.jpg" alt="">
-                <img class="active" src="./img/img-4.jpg" alt="">
-                <img src="./img/img-5.jpg" alt="">
-                <img src="./img/img-6.jpg" alt="">
-            </div>
-            <div class="uploads__right">
-                <form action="#" onsubmit="uploadImage(event)">
-                    <div class="form-control">
-                        <label for="title">Title</label>
-                        <input type="text" id="imageTitle" value="" placeholder="Give image a title">
-                    </div>
-                    <div class="form-control">
-                        <label for="alt">Alt</label>
-                        <input type="text" id="imageAlt" value="" placeholder="Enter Alt Text">
-                    </div>
-                    <div class="form-control">
-                        <label for="alt">Select Image</label>
-                        <input type="file" id="imageFile" value="" placeholder="Choose Image">
-                    </div>
-                    
-                    <button class="btn btn-primary">Upload New!</button>
-                    
-                </form>
-            </div>
-        </div>
-        <div class="modal__left--close" onclick="closeModal()">
-                <i class="fa fa-times"></i>
-        </div>
-    </div>
-    `)
-    console.log('you are about to upload an image')
-}
-
-function uploadImage(e){
-    e.preventDefault();
-    const imageTitle = document.querySelector('#imageTitle').value;
-    const imageAlt = document.querySelector('#imageAlt').value;
-    const imageFile = document.querySelector('#imageFile');
-    const imageData = new FormData();
-    imageData.append('image',imageFile.files[0])
-
-    const imageInfo = {
-        imageTitle,
-        imageAlt,
-        imageData
-    }
-
-
-    fetch('http://localhost:3000/upload',{
-        method: 'POST',
-        body: imageData
-    })
-    .then(response => response.json())
-    .then(result => console.log(result))
-    .catch(err => console.log(err))
 }
 
 function closeModal() {

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Intro to bootstrap</title>
+		<link rel="stylesheet" href="./css/bootstrap.min.css" />
+		<style>
+			button {
+				margin-bottom: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="my-5 p-4 border">
+				<h1 class="display-2">Layout</h1>
+
+				<h1 class="my-3">Introdution to bootstrap</h1>
+				<p class="lead text-start">
+					Quickly design and customize responsive mobile-first sites with
+					Bootstrap, the world’s most popular front-end open source toolkit,
+					featuring Sass variables and mixins, responsive grid system, extensive
+					prebuilt components, and powerful JavaScript plugins..
+				</p>
+				<button class="btn btn-warning btn-lg">Learn more</button>
+			</div>
+
+			<div class="my-5 p-4 border">
+				<h1 class="display-1">Buttons</h1>
+
+				<div class="filled mb-3">
+					<h4>Filled</h4>
+					<button class="btn btn-primary">primary</button>
+					<button class="btn btn-secondary">secondary</button>
+					<button class="btn btn-success">success</button>
+					<button class="btn btn-info">info</button>
+					<button class="btn btn-warning">warning</button>
+					<button class="btn btn-danger">danger</button>
+					<button class="btn btn-dark">dark</button>
+					<button class="btn btn-light">light</button>
+				</div>
+
+				<div class="outline mb-3">
+					<h4>Outlined</h4>
+					<button class="btn btn-outline-primary">primary</button>
+					<button class="btn btn-outline-secondary">secondary</button>
+					<button class="btn btn-outline-success">success</button>
+					<button class="btn btn-outline-info">info</button>
+					<button class="btn btn-outline-warning">warning</button>
+					<button class="btn btn-outline-danger">danger</button>
+					<button class="btn btn-outline-dark">dark</button>
+					<button class="btn btn-outline-light">light</button>
+				</div>
+			</div>
+
+			<div class="my-5 p-4 border">
+				<h1 class="display-2">Forms</h1>
+
+				<form action="#">
+					<div class="mb-3">
+						<label for="name" class="form-label">Name</label>
+						<input class="form-control" type="text" />
+						<div class="form-text">No Nicks here</div>
+					</div>
+
+					<div class="mb-3">
+						<label for="email" class="form-label">Email</label>
+						<input class="form-control" type="text" />
+						<div class="form-text">We only accept favourite emails</div>
+					</div>
+
+					<div class="mb-3">
+						<label for="gender" class="form-label">Gender</label>
+						<select name="gener" id="gender" class="form-select">
+							<option value="male">Male</option>
+							<option value="female">Female</option>
+							<option value="Others">Other</option>
+						</select>
+					</div>
+
+					<div class="input-group mb-3">
+						<span class="input-group-text" >$</span>
+						<input
+							type="text"
+							class="form-control"
+							placeholder="Amount"
+							
+						/>
+					</div>
+
+					<div class="mb-3">
+						<div class="d-grid">
+							<button class="btn btn-primary">Submit</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
